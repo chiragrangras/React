@@ -6,24 +6,38 @@
     <title>Revision JS</title>
 </head>
 <body>
-    <h1 id="heading"></h1>
+    <h1 id="xy"></h1>
 
     <script>
         document.write("this is body..!<h1>Hello</h1>");
 
         console.log('this is body..!<h1>Hello</h1>');
 
-        document.getElementById('heading').innerHTML = "THIS IS IN <u>ITALIC</u>"
+        document.getElementById('xy').innerHTML = "THIS IS IN <i>ITALIC</i>"
 
-        // window.document.getElementById('heading').innerText = "THIS IS IN <u>ITALIC</u>"
+        // window.document.getElementById('xy').innerText = "THIS IS IN <u>ITALIC</u>"
 
-        alert("alert");
+        // alert("alert");
 
-        confirm("Are you sure?");
+        // confirm("Are you sure?");
 
-        prompt("How are you?");
+        // prompt("How are you?");
 
-        print();
+        // print();
+
+        const x = 12;
+
+        document.write(x);
+        
+        z = document.getElementById('xy');
+
+        z.innerHTML ="Rangras";
+
+        z.innerText ="Chirag";
+
+        z.style.color="red";
+        
+        document.write(z.id);
     </script>
 </body>
 </html>
