@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        .xyz{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+        }
+        .abc{
+            height: 100px;
+            width: 100px;
+            background-color: blue;            
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <button onclick="box1()">Get Div ....!</button>
+
+        <button onclick="">Change Div Color....!</button>
+    </div>
+
+    <script>
+        var div_tag = document.getElementById('test');
+
+        function box1(){
+            div_tag.classList = 'xyz';
+        }
+    </script>
+</body>
+</html>
