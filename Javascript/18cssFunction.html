@@ -18,17 +18,20 @@
     </style>
 </head>
 <body>
-    <div id="test">
+    <div id="test"></div>
         <button onclick="box1()">Get Div ....!</button>
 
-        <button onclick="">Change Div Color....!</button>
-    </div>
+        <button onclick="box2()">Change Div Color....!</button>
 
     <script>
         var div_tag = document.getElementById('test');
 
         function box1(){
             div_tag.classList = 'xyz';
+        }
+
+        function box2(){
+            div_tag.className = 'abc';
         }
     </script>
 </body>
