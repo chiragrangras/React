@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Remove CSS</title>
+  </head>
+  <style>
+    .xyz {
+      height: 100px;
+      width: 100px;
+      border: 2px solid;
+    }
+    .c {
+      height: 100px;
+      width: 100px;
+      background: gray;
+    }
+  </style>
+  <body>
+    <div class="xyz" id="test"></div>
+    <button onclick="AddCSS()">Add CSS</button>
+    <button onclick="RemoveCSS()">Remove CSS</button>
+    <button onclick="Add_RemoveCSS()">Add-Remove CSS</button>
+
+    <script>
+      var div = document.getElementById("test");
+
+      function AddCSS() {
+        div.classList.add("c");
+      }
+
+      function RemoveCSS() {
+        div.classList.remove("c");
+      }
+      function Add_RemoveCSS() {
+        //div.classList.toggle('c');
+        if(1==1){
+            div.className = "c";
+        }else{
+            div.className = "";
+        }
+      }
+    </script>
+  </body>
+</html>
