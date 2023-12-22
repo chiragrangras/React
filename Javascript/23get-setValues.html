@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get-setValues</title>
+  </head>
+  <body>
+    <h1 id="title" onclick="getVal()">Hello</h1>
+
+    <input type="text" id="inp">
+
+    <img id="img" src="xxbk.jpg" alt="No Images" width="100px" height="100px">
+    
+    <br>
+
+    <button id="btn" onclick="inptext()">Get Value</button>
+
+    <script>
+      var h1_tag = document.getElementById("title");
+
+      h1_tag.style.color = "red";
+
+      var inp_tag = document.getElementById('inp');
+      var img_tag = document.getElementById('img');
+
+      function inptext(){
+        img_tag.alt = inp_tag.value
+      }
+
+    </script>
+  </body>
+</html>
