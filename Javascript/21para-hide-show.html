@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Hide-Show</title>
+  </head>
+  <body>
+    <h1 id="heading">Para Hide-Show</h1>
+    <p id="para">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam,
+      voluptatibus error. Tenetur a iure assumenda impedit reprehenderit odit ex
+      dolor omnis nostrum laboriosam quasi in magni, alias consequatur nisi
+      eveniet maxime quis qui ab quibusdam. Quos consectetur quia quasi dolorem
+      temporibus unde molestias porro? Repudiandae voluptate dolorem a
+      perspiciatis soluta.
+    </p>
+
+    <button id="btn1" onclick="hide()">Hide</button>
+    <button id="btn2" onclick="show()">Show</button>
+    <button id="btn3" onclick="hideshow()">Hide-Show</button>
+
+    <script>
+      var h1_tag = document.getElementById("heading");
+      var p_tag = document.getElementById("para");
+
+      h1_tag.style.textAlign = "center";
+      h1_tag.style.color = "blue";
+
+      function hide() {
+        p_tag.style.display = "none";
+      }
+
+      function show() {
+        p_tag.style.display = "block";
+      }
+
+      function hideshow() {
+        if (p_tag.style.display == "block") {
+          p_tag.style.display = "none";
+        } else {
+          p_tag.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
