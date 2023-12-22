@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <h1 id="title">Currency Converter</h1>
+    Indian Rupees :- <input type="text" id="rupees" />
+    <select id="currency" onchange="getConverter()">
+      <option>---select option---</option>
+      <option value="0.012">America (USD)</option>
+      <option value="0.011">Germany (Euro)</option>
+      <option value="0.086">China (Yuan)</option>
+      <option value="0.016">Canada (Canadian Dollar)</option>
+      <option value="0.018">Australia (Australian Dollar)</option>
+    </select>
+
+    <div id="res"></div>
+
+    <script>
+
+        var h1_tag = document.getElementById('title');
+
+        h1_tag.style.color = 'red';
+        h1_tag.style.textAlign = 'center';
+        
+
+      localcurrency = document.getElementById("rupees");
+      othercurrency = document.getElementById('currency');
+
+      function getConverter(){
+        document.getElementById('res').innerHTML = localcurrency.value * othercurrency.value;
+      }
+    </script>
+  </body>
+</html>
