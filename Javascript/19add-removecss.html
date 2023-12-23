@@ -12,33 +12,41 @@
       border: 2px solid;
     }
     .c {
-      height: 100px;
-      width: 100px;
       background: gray;
     }
   </style>
   <body>
     <div class="xyz" id="test"></div>
-    <button onclick="AddCSS()">Add CSS</button>
-    <button onclick="RemoveCSS()">Remove CSS</button>
-    <button onclick="Add_RemoveCSS()">Add-Remove CSS</button>
+    <button onclick="addCSS()">Add CSS</button>
+    <button onclick="removeCSS()">Remove CSS</button>
+    <button onclick="addRemoveCSS()">Add-Remove CSS</button>
 
     <script>
-      var div = document.getElementById("test");
+      let testBox = document.getElementById("test");
 
-      function AddCSS() {
-        div.classList.add("c");
+      function addCSS() {
+        testBox.classList.add("c");
       }
 
-      function RemoveCSS() {
-        div.classList.remove("c");
+      function removeCSS() {
+        testBox.classList.remove("c");
       }
-      function Add_RemoveCSS() {
-        //div.classList.toggle('c');
-        if(1==1){
-            div.className = "c";
+      function addRemoveCSS() {
+
+        let testBoxClassList = testBox.classList;
+        
+        // This will print all the classes for testBox element
+        // console.log(testBoxClassList); 
+        
+        // This will print if the class 'c' is active in testBox element or not
+        // console.log(testBoxClassList.contains('c'));
+
+        if(testBoxClassList.contains('c')){
+            // testBox.className = "xyz";
+            testBox.classList.remove('c');
         }else{
-            div.className = "";
+            //testBox.className = "xyz c";
+            testBox.classList.add('c');
         }
       }
     </script>
