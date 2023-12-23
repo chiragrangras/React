@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      mark1 = 90;
+      mark2 = 80;
+      mark3 = 70;
+      mark4 = 120;
+
+      // max = (mark1 > mark2 && mark1 > mark3) ? mark1 : (mark2 > mark3) ? mark2 : mark3;
+
+      // max1 = (mark1 > mark2) ? (mark1 > mark3) ? mark1: mark3 : (mark2 > mark3) ? mark2 : mark3;
+
+      if(mark1 > mark2){
+        if(mark1 > mark3){
+            if(mark1 > mark4){
+                max1 = mark1;
+            }else{
+                max1 = mark4;
+            }
+        }else{
+            if(mark3 > mark4){
+                max1 = mark3;
+            }else{
+                marx1 = mark4;
+            }
+        }
+      }else{
+        if(mark2 > mark3){
+            if(mark2 > mark4){
+                max1 = mark2;
+            }else{
+                max1 = mark4;
+            }
+        }else{
+            if(mark3 > mark4){
+                max1 = mark3;
+            }
+            else{
+                max1 = mark4;
+            }
+        }
+      }
+
+      // document.write(max + "<br>");
+      document.write(max1);
+    </script>
+  </body>
+</html>
