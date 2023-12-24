@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse events</title>
+  </head>
+  <body>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dolorem,
+      quas quia blanditiis molestias exercitationem. Sit, architecto non. Non,
+      dolore labore alias iure natus voluptatum temporibus fugiat aliquid
+      beatae. Quis aut autem nemo porro at dolores voluptate cum est, corporis
+      id vero doloribus eligendi quaerat ipsa laborum? Repellendus eos maiores
+      necessitatibus quis suscipit eligendi accusamus fugit error facilis
+      perferendis cum ducimus tenetur sint totam quia laborum, maxime provident
+      corrupti dignissimos rem sunt commodi molestias libero. Facilis maxime
+      nisi non ut quo sunt saepe corporis, soluta provident vero asperiores
+      illum suscipit natus iste accusantium optio nobis architecto minima error
+      magni perferendis!
+    </p>
+
+    <button id="btn1" onclick="hide()">Click</button>
+    <button id="btn2" ondblclick="hide()">Double Click</button>
+    <button id="btn3" onmouseenter="hide()">Mouse Enter</button>
+    <button id="btn4" onmouseout="hide()">Mouse Out</button>
+
+    <script>
+         let p = document.getElementById('para');
+         function hide(){
+            p.style.display = 'none';
+         }
+    </script>
+  </body>
+</html>
