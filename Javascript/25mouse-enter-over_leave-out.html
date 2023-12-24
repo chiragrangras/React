@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse-enter-over_leave-out</title>
+  </head>
+  <body>
+    <h1 id="heading" id="heading" onmouseover="Test()" onmouseleave="Test1()">Hello</h1>
+
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea doloribus
+      porro similique repellendus quidem ex non. Laudantium consequatur deserunt
+      expedita consectetur aperiam omnis alias assumenda, soluta placeat ad
+      debitis repudiandae similique, consequuntur illum optio sint odit ratione
+      minima qui fugiat illo minus id rerum? Alias quibusdam culpa id minima ad.
+    </p>
+
+    <script>
+
+        let h = document.getElementById('heading');
+
+        let p = document.getElementById('para');
+
+        function Test(){
+            h.innerHTML = "Chirag";
+        }
+
+        function Test1(){
+            h.innerHTML = p.innerHTML;
+        }
+    </script>
+  </body>
+</html>
