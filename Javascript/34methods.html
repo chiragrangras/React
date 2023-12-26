@@ -17,14 +17,14 @@
 
     <script>
         //p_tag =document.getElementById('para');
-        //p_tag.style.color = 'red';
-
-        h1_tag = document.getElementsByTagName('h1');
         
-        p_tag = document.querySelector('#t1')
+        p_tag = document.querySelector('.para');
+       
+        p_tag.style.color = "red";
 
-        p_tag.style.color = "red"
-        console.log(p_tag)
+        h1_tag = document.querySelectorAll('h1');
+
+        h1_tag[1].style.color = "blue";
 
         for(i=0;i<h1_tag.length;i++){
             h1_tag[2].style.color = 'red';
