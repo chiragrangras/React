@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods in JS</title>
+</head>
+<body>
+    <h1 id="t1" class="t1" name="t1">h 1</h1>
+    <h1 id="t1" class="t1" name="t1">h 2</h1>
+    <h1 id="t1" class="t1" name="t1">h 3</h1>
+
+    <p class="para" id="para">Para</p>
+
+    <input type="text" class="inp1"><br>
+    <input type="text" class="inp1"><br>
+
+    <script>
+        //p_tag =document.getElementById('para');
+        //p_tag.style.color = 'red';
+
+        h1_tag = document.getElementsByTagName('h1');
+        
+        p_tag = document.querySelector('#t1')
+
+        p_tag.style.color = "red"
+        console.log(p_tag)
+
+        for(i=0;i<h1_tag.length;i++){
+            h1_tag[2].style.color = 'red';
+        }
+
+    </script>
+</body>
+</html>
