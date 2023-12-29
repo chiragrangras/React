@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Each loop</title>
+  </head>
+  <body>
+    <script>
+      // varname.forEach(functionName);
+
+      // students.forEach(Name)
+
+      // firstPara ==> values
+      // secondPara ==> Index
+      let students = ["Chirag", 30, "FrontEnd"];
+      students.forEach(function test(i, v, arr) {
+        document.write(i);
+      });
+      document.write("<br>");
+      students.forEach(function (i, v, arr) {
+        // Anonymous function
+        document.write(v);
+      });
+      document.write("<br>");
+      students.forEach((i, v, arr) => {
+        // Arrow function
+        document.write(arr);
+      });
+    </script>
+  </body>
+</html>
