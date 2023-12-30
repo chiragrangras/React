@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide-addEvenListener</title>
+  </head>
+  <body>
+    <p class="para" id="para" name="para">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, nihil
+      modi? Culpa autem, enim neque officia maiores voluptas inventore minima
+      nesciunt, accusamus atque quidem earum aliquam eveniet mollitia
+      consectetur nostrum fugit delectus cumque sequi sed sint quia quam modi
+      quasi? Laudantium dolorum, officiis nulla dolores nobis assumenda
+      dignissimos aspernatur veniam exercitationem molestiae quia enim
+      excepturi, tempore quos repudiandae asperiores. Earum amet velit illo
+      officia non sunt! Impedit ipsam rem soluta laborum fuga, quis, commodi
+      sapiente corrupti doloribus non, voluptatem placeat quo explicabo incidunt
+      sit eius! Rerum odit adipisci sit, saepe natus, alias assumenda,
+      reiciendis delectus dolore iusto at nemo ex!
+    </p>
+    <button id="btn">TEST</button>
+
+    <script>
+      btn.addEventListener("click", () => {
+        btn.style.display = "none";
+      });
+      // ==> to get single element
+      // document.getElementById('para')
+      // document.querySelector('#para')
+      // document.querySelector('.para')
+
+      // ==> to get multiple elemente
+      // document.getElementsByClassName ('para')
+      // document.getElementsByTagName('p')
+      // document.getElementsByName('para')
+      // document.querySelectorAll('.para')
+
+      //   var .addEventListener('event',function)
+
+      let p = document.querySelector(".para");
+
+      // p.addEventListener("mouseenter",ApplyColor)
+
+      // p.style.color = "red"
+
+      //   function ApplyColor()
+      //   {
+      //       p.style.color = "red"
+      //   }
+
+      //     p.addEventListener("click", function ApplyColor() {
+      //       p.style.color = "blue";
+      //     });
+
+      //   p.addEventListener("click", function () {
+      //     p.style.color = "red";
+      //   });
+
+      p.addEventListener("mouseenter", () => {
+        p.style.color = "red";
+      });
+    </script>
+  </body>
+</html>
