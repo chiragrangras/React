@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeout</title>
+  </head>
+  <body>
+    <script>
+      // setTimeout(functionName,Timeinmilsec)
+      // setTimeout(t,2000)
+
+        x = 0;
+        function t() {
+          if (x <= 5) {
+            document.write("h<br>");
+            x++;
+            setTimeout(t, 1000);
+          }
+        }
+        t();
+    </script>
+  </body>
+</html>
