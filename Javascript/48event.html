@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <p id="para">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum dolor,
+      odio consectetur voluptatibus eveniet exercitationem odit laborum esse
+      harum, voluptatum perferendis vel! Vel doloribus placeat delectus sapiente
+      et, nisi incidunt tempora expedita natus nesciunt consequatur perspiciatis
+      similique debitis voluptate rerum labore neque cum, reiciendis enim nihil
+      facilis quia quaerat modi veniam? Nulla perferendis dolor veniam neque
+      aspernatur. Praesentium, quod debitis. Iure, velit cumque explicabo
+      debitis ab totam. Mollitia facilis pariatur culpa assumenda ipsam ipsum
+      magnam maxime rem quae deleniti expedita autem officia veniam, id,
+      laboriosam minima voluptatum, deserunt nisi! Magnam ea nam labore ex odit
+      quis repudiandae ad pariatur corrupti.
+    </p>
+
+    <script>
+        para = document.querySelector('#para');
+        addEventListener('load',HidePara);
+        addEventListener("unload",HidePara);
+
+        function HidePara(){
+            para.style.color = "red";
+            para.style.color = 'blue';
+        }
+        HidePara();
+    </script>
+  </body>
+</html>
