@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      // Str : collection of Characters Array ==> index
+
+      // slice (p1,p2) ==> both are index
+      // substr (p1,p2) ==> p1 = index , p2=length
+      //sunbstring ==> cant accept -ve indexes
+
+      arr = [1, 23, 45];
+
+      arr.push(32, 45, 65);
+      arr.pop();
+      arr.pop();
+      arr.pop();
+      arr.pop();
+      arr.pop();
+      arr.push(55, 77);
+
+      document.write(arr + "<br><br>");
+
+      var str = "hello Chirag Bas Chirag Chirag Chirag...";
+
+      document.write(str.replace(/ChiRag/gi, "Rangras") + "<br><br>");
+
+      document.write(str.replace("Chirag", "Chirag Rangras") + "<br><br>");
+
+      document.write(str[6] + "<br><br>");
+      document.write(str.length + "<br><br>");
+      str1 = "hi";
+      str2 = "Hiren";
+
+      str3 = "Greeting :" + str1 + " " + "Name: " + str2;
+      document.write(str3 + "<br>");
+
+      document.write(str.slice(12) + "<br><br>");
+      document.write(str.slice(-8) + "<br><br>");
+      document.write(str.slice(2, -4) + "<br><br>");
+
+      document.write(str.substr(12) + "<br><br>");
+      document.write(str.substr(-1) + "<br><br>");
+
+      document.write(str.substr(2, 5) + "<br><br>");
+
+      document.write(str.substring(12) + "<br><br>");
+      document.write(str.substring(-1) + "<br><br>"); // wont work
+
+      document.write(str.substring(2, 4) + "<br><br>");
+    </script>
+  </body>
+</html>
