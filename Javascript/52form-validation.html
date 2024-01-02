@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-validation</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>Name :-</td>
+        <td>
+          <input type="text" id="nm" onblur="Validate(nm,nmErr)" />
+          <span id="nmErr"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Email :-</td>
+        <td>
+          <input type="text" id="em" onblur="Validate(em,emErr)" />
+          <span id="emErr"></span>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+        function Validate(x,y){
+            console.log(x)
+            if(x.value == ""){
+                y.innerHTML = "* Required ...!"
+                y.style.color = "red"
+                return false;
+            }else{
+                y.innerHTML = ""
+            }
+        }
+    </script>
+  </body>
+</html>
