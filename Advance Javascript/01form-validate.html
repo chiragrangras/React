@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-validate</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label>Firstname :-</label>
+            <input id="fnm" type="text" onblur="validation(fnm,nmErr)">
+            <span id="nmErr"></span>
+        </div>
+
+        <div>
+            <label>Lastname :-</label>
+            <input id="lnm" type="text" onblur="validation(lnm,lnmErr)">
+            <span id="lnmErr"></span>
+        </div>
+
+        <div>
+            <label>Email :-</label>
+            <input id="em" type="text" onblur="validation(em,emErr)">
+            <span id="emErr"></span>
+        </div>
+    </form>
+
+    <script>
+        function validation(inputtag,spTag){
+            console.log(inputtag);// hi
+            console.log(spTag);// 123
+
+            if(inputtag.value == ''){
+                spTag.innerHTML = "* Required...";
+                spTag.style.color = "Red";
+                inputtag.style.border = "3px solid red"
+            }
+            else{
+                spTag.innerHTML = "";
+                inputtag.style.border = "3px solid green"
+            }
+        }
+    </script>
+</body>
+</html>
