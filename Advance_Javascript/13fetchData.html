@@ -18,7 +18,7 @@
     <button id="btn2">Get JSON Data</button>
     <button id="btn3">Get API Data</button>
 
-        <div id="op"></div>
+    <h5 id="op"></h5>
 
     <script>
       b1 = document.getElementById("btn1");
@@ -30,14 +30,15 @@
       b3.addEventListener("click", GetAPI);
 
       function GetText() {
-        fetch("textFile.txt").then((res) => {
-          return res.text();
-        })
-        .then((data) => {
+        fetch("textFile.txt")
+          .then((res) => {
+            return res.text();
+          })
+          .then((data) => {
             //console.log(data);
             //document.write(data)
-            document.getElementById('op').innerHTML = data
-        });
+            document.getElementById("op").innerHTML = data;
+          });
       }
 
       function GetJSON() {
@@ -46,17 +47,49 @@
             return res.json();
           })
           .then((data) => {
-            console.log(data);
+            //console.log(data);
+            document.getElementById("op").innerHTML =
+              "Name :" +
+              data.Name +
+              "<br>" +
+              "Age :" +
+              data.Age +
+              "<br>" +
+              "Course :" +
+              data.Course;
           });
       }
 
       function GetAPI() {
         fetch("https://jsonplaceholder.typicode.com/users")
           .then((res) => {
-            return res.text();
+            return res.json();
           })
           .then((data) => {
             console.log(data);
+            // document.getElementById('op').innerHTML = data
+
+            h = `<h1>DATA</h1><table>
+                    <tr>
+                        <td>
+                            id
+                            name
+                            email`;
+            data.map((v) => {
+              h =
+                h + `
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ${v.id}
+                            ${v.name}
+                            ${v.email}
+                        </td>
+                    </tr>
+                </table>`;
+            })
+            document.getElementById('op').innerHTML = h;
           });
       }
     </script>
