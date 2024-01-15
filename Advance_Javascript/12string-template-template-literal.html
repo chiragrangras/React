@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1 class="x"></h1>
-    
-    <script>
-        let h1 = "hi";
 
-        let data = `Hello
+    <script>
+      let h1 = "hi";
+
+      let data = `Hello
         
         Chirag 
         how <b><u style="color: blue">are</u></b>
         
         you`;
 
-        document.write(data);
+      document.write(data);
 
-        document.write(`<b style="color: red">hi</b>`)
+      document.write(`<b style="color: red">hi</b>`);
 
-        h1_tag = document.querySelector('.x');
+      h1_tag = document.querySelector(".x");
+
+      h1_tag.innerHTML = `<table border="1" style="border 3px solid red">
+            <tr>
+                <th>Heading</th>
+            </tr>
+            <tr>
+                <td>col 1</td>
+            </tr>
+            <tr>
+                <td>col 1</td>
+            </tr>
+            <tr>
+                <td>col 1</td>
+            </tr>
+            </table>`
+            // ````` : backtick
     </script>
-</body>
+  </body>
 </html>
