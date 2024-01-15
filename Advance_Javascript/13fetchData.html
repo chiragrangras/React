@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Data</title>
+  </head>
+  <body>
+    <!-- JSON: Javascript Object Notation
+    API: Application Programming Interface
+
+    method joining
+    fetch('path/file.type')
+    .then(function t(){})
+    .then(()=>{}) -->
+
+    <button>Get Text</button>
+    <button>Get JSON Data</button>
+    <button>Get API Data</button>
+
+    <script>
+      fetch('textFile.txt')
+      .then((res) => { 
+        console.log(res);
+      });
+      // .then((data)=>{})
+    </script>
+  </body>
+</html>
