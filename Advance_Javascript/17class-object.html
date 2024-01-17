@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+      class Bank {
+        y = 12;
+        BankDetails(pin) {
+          let atmpin = pin;
+          let balance = 15000;
+          let bankName = "HDFC";
+          let IFSC = "HDFC00012";
+
+          console.log(atmpin);
+          console.log(balance);
+          console.log(bankName);
+          console.log(IFSC);
+        }
+      }
+
+      let chirag = new Bank();
+      let vishal = new Bank();
+      let sunil = new Bank();
+
+      //x.BankDetails(1234);
+      //console.log(x.y);
+      chirag.BankDetails(1234)
+      sunil.BankDetails(7534)
+      vishal.BankDetails(6638)
+    </script>
+  </body>
+</html>
