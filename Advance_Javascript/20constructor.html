@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor</title>
+  </head>
+  <body>
+      <!-- Constructor: Its a magic function which is called automatically.
+      when an object of a class is created.
+
+      Using constructor keyword.
+
+      Syntax :
+      constructor()
+      {
+      ..code
+      } -->
+
+    <script>
+      class TestConstructor {
+        constructor() {
+          document.write("c1  <br>");
+        }
+        // constructor()
+        // {
+        //     document.write("c1");
+        // }
+        test() {
+          document.write("test  <br>");
+        }
+      }
+
+      let obj = new TestConstructor();
+      obj.test();
+    </script>
+  </body>
+</html>
