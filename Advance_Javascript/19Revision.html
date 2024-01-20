@@ -21,23 +21,26 @@
         c = () => {
           document.write("c<br>");
         };
-        d()
-        {
-            document.write("d<br>");
+        d() {
+          document.write("d<br>");
         }
-        constructor()
-        {
-            document.write("const<br>")
+        constructor() {
+          document.write("const<br>");
+        }
+        static e() {
+          document.write("e<br>");
         }
       }
 
-      let obj1 = new T();
-      
-      document.write(obj1.a());
-      obj1.b();
-      obj1.c();
-      obj1.d();
-      T.constructor();
+      let obj = new T();
+
+      //document.write(obj.x + "<br>");
+
+      document.write(obj.a());
+      obj.b();
+      obj.c();
+      obj.d();
+      T.e();
     </script>
   </body>
 </html>
