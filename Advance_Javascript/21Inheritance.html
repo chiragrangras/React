@@ -9,16 +9,20 @@
     <script>
         class Parent
         {
+            xyz=12;
             getX()
             {
                 var prop = "Parent Prop";
-                document.write(prop);
+                document.write("Prop <br>");
             }
         }
 
         class Child extends Parent
         {
-
+            myProp()
+            {
+                document.write("Child Prop <br>");
+            }
         }
 
         // const obj = new Parent;
@@ -26,7 +30,9 @@
 
         const obj = new Child;
         obj.getX();
+        obj.myProp();
 
+        document.write(obj.xyz);
     </script>
 </body>
 </html>
