@@ -15,27 +15,27 @@
       }
       class Mother {
         getB() {
-          var prop = "mother Prop";
+          var prop = "Mother Prop";
           document.write("Mother Prop 200 <br>");
         }
       }
-      class daughter extends mother {
+      class Daughter extends Mother {
         getD() {
-          var prop = "daughter Prop";
+          var prop = "Daughter Prop";
           document.write("Daughter Prop 150 <br>");
         }
       }
-      class son extends father {
+      class Son extends Father {
         getC() {
-          var prop = "son Prop";
+          var prop = "Son Prop";
           document.write("Son Prop 50 <br>");
         }
       }
 
-      const obj1 = new son();
+      const obj1 = new Son();
       obj1.getA();
       obj1.getC();
-      const obj2 = new daughter();
+      const obj2 = new Daughter();
       obj2.getB();
       obj2.getD();
     </script>
