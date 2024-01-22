@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Father {
+        getA() {
+          var prop = "Father Prop";
+          document.write("Father Prop<br>");
+        }
+      }
+      class Mother {
+        getB() {
+          var prop = "mother Prop";
+          document.write("Mother Prop 200 <br>");
+        }
+      }
+      class daughter extends mother {
+        getD() {
+          var prop = "daughter Prop";
+          document.write("Daughter Prop 150 <br>");
+        }
+      }
+      class son extends father {
+        getC() {
+          var prop = "son Prop";
+          document.write("Son Prop 50 <br>");
+        }
+      }
+
+      const obj1 = new son();
+      obj1.getA();
+      obj1.getC();
+      const obj2 = new daughter();
+      obj2.getB();
+      obj2.getD();
+    </script>
+  </body>
+</html>
