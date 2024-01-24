@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        students = {
+            display:function(){
+                return this.name + " " + this.course +"<br>";
+            }
+        }
+        
+        student1 = {
+            "name":"Vishal",
+            "course":"Back-end",
+        }
+        student2 = {
+            "name": "Chirag",
+            "course": "Front-end",
+        }
+
+
+        document.write(students.display.apply(student1))
+        document.write(students.display.apply(student2))
+    </script>
+</body>
+</html>
