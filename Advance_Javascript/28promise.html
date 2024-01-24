@@ -8,11 +8,11 @@
 <body>
     <script>
         const p = new Promise((r,e)=>{
-            return r("xyz")
+            return e("xyz")
         })
         p.then(
-            (res)=>{console.log(res)},
-            (err)=>{console.log(err)},
+            (res)=>{console.log(`res: ${res}`)},
+            (err)=>{console.log(`err: ${err}`)},
         )
     </script>
 </body>
