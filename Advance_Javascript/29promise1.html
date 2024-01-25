@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Emotions(emotion){
+            console.log(emotion)
+        }
+        
+        let myPromise = new Promise((call,nahiKaregaCall)=>{
+            var x=1;
+            if(x){
+                return call("Thanks you babu...!")
+            }
+            else{
+                return nahiKaregaCall("Bhad me ja...! tu nahi to aur koi sahi..!");
+            }
+        })
+
+        myPromise.then(
+            (khushi)=>{
+                Emotions(khushi)
+            },
+            (angry)=>{
+                Emotions(angry)
+            }
+        );
+    </script>
+</body>
+</html>
