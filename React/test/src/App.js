@@ -17,6 +17,8 @@ function Test1() {
 
         <img src="images/i1.jpg" height={100}></img>
 
+        {/* <img src={i1} height={100}></img> */}
+
         <img
           height={"100px"}
           src="https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Fbig%2Fnissan%2Fgt-r%2Fnissan-gt-r.jpg%3Fv%3D25&w=3840&q=75"
