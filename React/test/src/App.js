@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import i1 from "./i1.jpg";
 import "./App.css";
 
 function Test1() {
@@ -17,7 +17,7 @@ function Test1() {
 
         <img src="images/i1.jpg" height={100}></img>
 
-        {/* <img src={i1} height={100}></img> */}
+        <img src={i1} height={100}></img>
 
         <img
           height={"100px"}
