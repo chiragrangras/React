@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>OOPS concepts in Javascript</title>
+    </head>
+    <body>
+        <h3 style="text-align: center;">OOPS Concepts</h3>
+        <div id="output">
+
+        </div>
+    </body>
+    <script>
+        // Basic datatype: boolean, string, number
+        // Advanced datatype: class
+        // Class is a collection of various constants, variables and methods
+        // Variables or constants in class is built using basic (primitive) datatypes
+        
+        
+        // A class can also have another class as the datatype of its variables
+        // See the example of Address class below
+
+        class Address{
+            constructor(houseNo, street, zipCode){
+                this.houseNo = houseNo;
+                this.street = street;
+                this.zipCode = zipCode;
+            }
+
+            getAddress(){
+                return `${this.houseNo}, ${this.street}\n ${this.zipCode}`;
+            }
+        }
+
+
+        class Person{
+            name;
+            age;
+            address;
+
+            constructor(name, age, address){
+                this.name = name;
+                this.age = age;
+                this.address = address;
+            }
+
+            greeting(){
+                console.log(`Hello ${this.name}`);
+            }
+
+            getAddress(){
+                console.log(`Address: ${this.address.getAddress()}`);
+            }
+        }
+
+
+        // If you remove `extends Person` from below line, then
+        // the inheritence will not work. Then the objects of Student class
+        // will not be able to call greeting() or getAddress() method
+        class Student extends Person{
+            dateOfBirth;
+
+            constructor(name, age, address, rollNumber){
+                super();
+                this.name = name;
+                this.age = age;
+                this.address = address;
+                this.rollNumber = rollNumber;
+            }
+
+            getDOB(){
+                console.log(`Name: ${this.name}, DOB: ${this.dateOfBirth}`);
+            }
+            
+            // Following is the example of method overloading
+            // Overloading: Two methods have same name but different arguments
+            getDOB(ageInDays){
+                return today - ageInDays;
+            }
+
+            // This is method overriding
+            // Here, we are overriding greeting() method of Person class with the Student Class
+            // Overriding: Method in parent and child class has same name, but different behavior.
+            greeting(){
+                console.log(`Hello Student! RollNumber is: ${this.rollNumber}, Name: ${this.name}`);
+            }
+
+        }
+        const address1 = new Address(18, 'Daimlerstrasse', 32657);
+        const person1 = new Person('Vishal Rangras', 32, address1);
+        const address2 = new Address('D/1', 'L. R. Apartment', 380004);
+        const student1 = new Student('Chirag Rangras', 30, address2, 1);
+
+        person1.greeting();
+        person1.getAddress();
+        person1.dateOfBirth = '02/09/1991';
+        
+        // Directly accessing the class variables using the class object
+        console.log(`Name: ${person1.name}, DOB: ${person1.dateOfBirth}`);
+        
+        // The following method call will not work because Person is a parent class
+        // which does not have getDOB() method.
+        // The getDOB() method is only available in child class Student.
+        // person1.getDOB();
+
+        student1.greeting();
+        student1.getAddress();
+        student1.dateOfBirth = '12/06/1993';
+        student1.getDOB();
+
+
+    </script>
+</html>
