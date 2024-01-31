@@ -4,7 +4,6 @@ import Compo1, { Compo2 } from './component.js';
 import Test2 from './component1.jsx';
 import Class2, { Class1, Fun1, Fun2 } from './component2.jsx';
 
-
 function App(){
 
   return(
