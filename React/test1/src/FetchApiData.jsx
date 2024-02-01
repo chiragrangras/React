@@ -8,8 +8,8 @@ function FetchApiData() {
       })
       .then((data) => {
         let header = " --- API DATA --- ";
-        data.map((v) => {
-          header = header + `<li>${v.name}</li>`;
+        data.map((v,i) => {
+          header = header + `<ol><li>${i+""+v.name}</li></ol>`;
         });
         document.getElementById("d1").innerHTML = header;
       });
