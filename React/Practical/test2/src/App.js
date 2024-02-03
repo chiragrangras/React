@@ -11,25 +11,25 @@ function App() {
     let n2 = document.getElementById("n2");
     let result = document.getElementById("res");
     let op = document.getElementById("operator");
-    switch (op) {
+    switch (op.value) {
       case "+":
-        result.innerHTML = n1 + n2;
+        result.innerHTML = (Number(n1.value) + Number(n2.value));
         break;
 
       case "-":
-        result.innerHTML = n1 - n2;
+        result.innerHTML = (Number(n1.value) - Number(n2.value));
         break;
 
       case "*":
-        result.innerHTML = n1 * n2;
+        result.innerHTML = (Number(n1.value) * (n2.value));
         break;
 
       case "/":
-        result.innerHTML = n1 / n2;
+        result.innerHTML = (Number(n1.value) / Number(n2.value));
         break;
 
       case "%":
-        result.innerHTML = n1 % n2;
+        result.innerHTML = (Number(n1.value) % Number(n2.value));
         break;
 
       default:
@@ -44,7 +44,7 @@ function App() {
       num2 : <input type="text" id="n2"></input>
       <br />
       <b id="res"></b>
-      <input type="text" id="operator"></input>
+      op :<input type="text" id="operator"></input>
       <button onClick={Cal}>Calculate</button>
       <div id="d1"></div>
       <button onClick={GetAnimateion}>Animate</button>
