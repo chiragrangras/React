@@ -1,11 +1,27 @@
-import React from 'react';
+import React from "react";
 
-class TestState extends React.Component{
+
+class TestState extends React.Component
+{
+    x=12;
+    
+    state = {num:1};
+
+    y= ()=>{
+
+        this.setState()
+        //alert("class alert...!")
+    }
+
     render()
     {
         return(
             <>
-            <h1>Class</h1>
+            <h1 onClick={this.y}>
+                Class {this.x}
+                <br/>
+                State : {this.state.num}
+            </h1>
             </>
         )
     }

@@ -4,7 +4,7 @@ import TestState from './ClassState';
 function App() {
   return (
     <div className="App">
-      <TestState/>
+    <TestState/>
     </div>
   );
 }
