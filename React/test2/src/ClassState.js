@@ -5,11 +5,11 @@ class TestState extends React.Component
 {
     x=12;
     
-    state = {num:1};
+    state = {num:11};
 
     y= ()=>{
 
-        this.setState()
+        this.setState({num:12})
         //alert("class alert...!")
     }
 
