@@ -5,7 +5,12 @@ class StateEx4 extends React.Component {
   render() {
     return (
       <div>
-        <input type="checkbox"></input>
+        <input
+          type="checkbox"
+          onClick={(e) => {
+            console.log(e.target.checked)
+          }}
+        ></input>
         <b>{this.state.bol}</b>
 
         {this.state.bol ? "true" : "false"}
