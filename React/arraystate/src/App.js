@@ -1,22 +1,40 @@
-import AddTitle from './AddTitle';
+
+import { useState } from 'react';
+import AddTodo from './AddTodo';
 import './App.css';
 
+let nextId = 3;
 let intialTodos = [
-  {title:'Apple'},
-  {title:'Mango'},
-  {title:'Orange'}
+  {
+    "name":"Chirag",
+    "id" : 1
+  },
+  {
+    "name":"Vishal",
+    "id" : 2
+  }
 ];
 
 function App() {
 
-  let handleAdd = (title) => {
+  const [todos,setTodos] = useState(intialTodos)
+
+  let handleAdd = (x) => {
     
-    console.log(title)
+    console.log(x)
+    
+    // setTodos([
+    //   {
+    //     "name": x,
+    //     "id": nextId++
+    //   }
+    // ])
+
   }
   
   return (
     <div className="App">
-      <AddTitle onAdd={handleAdd}/>
+      <AddTodo onAdd={handleAdd}/>
     </div>
   );
 }
