@@ -2,12 +2,13 @@ import React, { useState } from "react"
 
 function AddTodo({onAdd}){
 
-    let [T,setT] = useState('');
+    let [t,setT] = useState('')
+    
     return(
         <div>
-            <input type="text" value={T} onChange={(e)=>{setT(e.target.value)}}/>
+            <input type="text" value={t} onChange={(e)=>{setT(e.target.value)}}/>
             <button onClick={()=>{
-                onAdd(T)
+                onAdd(t)
             }}>Add</button>
         </div>
     )
