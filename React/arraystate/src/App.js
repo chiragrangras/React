@@ -1,40 +1,41 @@
-
 import { useState } from 'react';
 import AddTodo from './AddTodo';
 import './App.css';
+import TaskList from './TaskList';
 
-let nextId = 3;
+let nextId =3;
 let intialTodos = [
   {
-    "name":"Chirag",
-    "id" : 1
+    name:'Sunil',
+    id:1
   },
   {
-    "name":"Vishal",
-    "id" : 2
+    name:'Vishal',
+    id:2
   }
-];
+]
 
 function App() {
 
-  const [todos,setTodos] = useState(intialTodos)
+  let [todos,setTodos] = useState(intialTodos)
+  let handleAdd =(x)=>{
+     
+    //console.log(x)
 
-  let handleAdd = (x) => {
-    
-    console.log(x)
-    
-    // setTodos([
-    //   {
-    //     "name": x,
-    //     "id": nextId++
-    //   }
-    // ])
+    setTodos([
 
+      ...todos,
+      {
+        "name":x,
+        "id":nextId++
+      }
+    ])
   }
-  
+
   return (
-    <div className="App">
+    <div className='App'>
       <AddTodo onAdd={handleAdd}/>
+      <TaskList confusion={todos}/>
     </div>
   );
 }
