@@ -32,24 +32,36 @@ function App() {
     ])
   }
 
-  let handleChange =(x)=>{
-    
-    console.log(x)
+  let handleChange =(nextTodo)=>{
+    // console.log(nextTodo)
 
-    // setTodos([
+    setTodos(
+      todos.map((todo)=>{
 
-    //   ...todos,
-    //   {
-    //     "name":x,
-    //     "id":nextId++
-    //   }
-    // ])
+        if(todo.id === nextTodo.id)
+        {
+          return nextTodo;
+        }
+        else
+        {
+          return todo;
+        }
+  
+      })
+    )
+  }
+
+  let handleDelete = (todoId)=>{
+
+    setTodos(todos.filter((v)=>{
+      return v.id!==todoId;
+    }))
   }
 
   return (
     <div className='App'>
       <AddTodo onAdd={handleAdd}/>
-      <TaskList confusion={todos} onchangeTodo={handleChange}/>
+      <TaskList confusion={todos} onchangeTodo={handleChange} ondeleteTodo={handleDelete}/>
     </div>
   );
 }
