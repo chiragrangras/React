@@ -32,10 +32,24 @@ function App() {
     ])
   }
 
+  let handleChange =(x)=>{
+    
+    console.log(x)
+
+    // setTodos([
+
+    //   ...todos,
+    //   {
+    //     "name":x,
+    //     "id":nextId++
+    //   }
+    // ])
+  }
+
   return (
     <div className='App'>
       <AddTodo onAdd={handleAdd}/>
-      <TaskList confusion={todos}/>
+      <TaskList confusion={todos} onchangeTodo={handleChange}/>
     </div>
   );
 }
