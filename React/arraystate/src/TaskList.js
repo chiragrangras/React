@@ -6,12 +6,11 @@ function TaskList({ confusion, onchangeTodo, ondeleteTodo }) {
         {confusion.map((v)=>(
             <div key={v.id}>
                 <li>
-                    {/* {v.name} */}
-
                     <Task
 
                     todo={v}
                     onchange={onchangeTodo}
+                    ondelete={ondeleteTodo}
                     />
                 </li>
             </div>
@@ -26,47 +25,34 @@ function Task({ todo, onchange, ondelete }) {
   let content;
 
   if (edit) {
-    content = (
-      <>
+    content = 
+    <>
         <input
           type="text"
           value={todo.name}
           onChange={(e) => {
             onchange({
-              name: e.target.value,
-            });
-          }}
-        />
-        <button>Save</button>
-      </>
-    );
-  } else {
-    content = (
-      <>
-        {todo.name}
-        <button
-          onClick={() => {
-            setEdit(true);
-          }}
-        >
-          Edit
-        </button>
-      </>
-    );
+              ...todo,
+              "name": e.target.value
+            })
+          }}/>
+        <button onClick={()=>{setEdit(false)}}>Save</button>
+    </>
+    } 
+    else 
+    {
+        content = <>
+            {todo.name}
+            <button onClick={() => {setEdit(true)}}>Edit</button>
+        </>
   }
 
   return (
     <>
       {content}
-      <button
-        onClick={() => {
-          ondelete(todo.id);
-        }}
-      >
-        Delete
-      </button>
+      <button onClick={() => {ondelete(todo.id)}}>Delete</button>
     </>
-  );
+  )
 }
 
-export default TaskList;
+export default TaskList
