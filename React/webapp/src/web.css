@@ -1,9 +1,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
-}
-body *{
-   padding: 10px 40px; 
+    padding: 0;
 }
 header
 {
@@ -41,6 +39,9 @@ section
     height: 200px;
     width: 150px;
     border: 3px solid;
+}
+.card img{
+    object-fit: contain;
 }
 footer
 {
