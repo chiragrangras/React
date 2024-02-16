@@ -1,5 +1,6 @@
 import './App.css';
 import MouseMoveUseEffect from './MouseMove_UseEfffect';
+import UseContextHook from './UseContextHook';
 import UseRefHook from './UseRefHook';
 
 
@@ -13,8 +14,9 @@ function App() {
 
   return (
     <div className="App">
-      <MouseMoveUseEffect/>
+      {/* <MouseMoveUseEffect/> */}
       <UseRefHook/>
+      <UseContextHook/>
     </div>
   );
 }
