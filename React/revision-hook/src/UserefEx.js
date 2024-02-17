@@ -15,7 +15,7 @@ let products = [
     }
 ]
 
-function UserrefEx(){
+function UserefEx(){
 
     let h2Ref = useRef();
     let divRef = useRef();
@@ -52,4 +52,4 @@ function UserrefEx(){
         </div>
     )
 }
-export default UserrefEx
+export default UserefEx
