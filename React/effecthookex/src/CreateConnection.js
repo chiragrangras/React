@@ -1,15 +1,13 @@
-
- export function createConnection(room,server)
+export function createConnection(room,server)
 {
-
-    return{
+    return {
         connect()
         {
-            console.log('Connected to ' + room + 'at ' + server );
+            console.log("Connected to " + room + " at " + server);
         },
         disconnect()
         {
-            console.log('Disconnected to ' + room + 'at ' + server );
+            console.log("Disconnected to " + room + " at " + server);
         }
     }
 }
