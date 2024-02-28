@@ -1,5 +1,5 @@
 {
-  "name": "reducer",
+  "name": "inc-dec-reducer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
