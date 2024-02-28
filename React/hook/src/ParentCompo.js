@@ -11,7 +11,7 @@ function ParentCompo(){
     return(
         <div>
 
-            Parent has now this{proprty[0].proprty}
+            Parent has now this{proprty[0].property}
             <Child1/>
             <Child2></Child2>
             <Child3/>
