@@ -17,7 +17,7 @@ function TriggerSrcoll(){
             <Box/>
             <ul>
                 {data}
-            </ul>            
+            </ul>
         </div>
     )
 }
