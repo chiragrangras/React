@@ -1,4 +1,5 @@
 import Age from './Age';
+import AgeText from './AgeText';
 import './App.css';
 import Name from './Name';
 
@@ -17,7 +18,14 @@ export let nameAgeReducer = (nameAgeState, action) => {
       nameAgeState.name = action.name;
       return {...nameAgeState};
     case "ageIncrement":
-      return;
+      nameAgeState.age++;
+      return {...nameAgeState};
+    case "ageChange":
+      const ageTextNr = parseInt(action.ageText);
+      if(!isNaN(ageTextNr) && ageTextNr >= 18){
+        nameAgeState.ageText = action.ageText;
+      }
+      return {...nameAgeState};
     default:
       return nameAgeState;
   }
@@ -28,6 +36,7 @@ function App() {
     <div className="App">
       <Name/>
       <Age/>
+      <AgeText/>
     </div>
   )
 }
