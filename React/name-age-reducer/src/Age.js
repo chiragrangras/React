@@ -1,18 +1,18 @@
 import React, { useReducer } from "react"
 import { nameAgeReducer } from "./App";
 
-let initialNameAge = {};
+let initialNameAge = {age: 18};
 
 function Age(){
 
-    let [ageincrement,dispatch] = useReducer(nameAgeReducer,initialNameAge);
+    let [nameAgeState,dispatch] = useReducer(nameAgeReducer,initialNameAge);
 
     return(
         <>
         <button onClick={()=>{
-            dispatch({ type : "ageincrement"})
+            dispatch({ type : "ageIncrement"})
         }}>Age</button>
-        <h4>You are</h4>
+        <h4>You are {nameAgeState.age}</h4>
         </>
     )
 }
