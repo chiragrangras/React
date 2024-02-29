@@ -10,6 +10,7 @@ function Name() {
   
   return (
     <>
+      <label>Name: </label>
       <input
         type="text"
         onChange={(e) => {
