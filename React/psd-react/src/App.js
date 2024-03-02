@@ -1,6 +1,8 @@
 import "./App.css";
 import img1 from './img-1.png';
-import img2 from './img-2.png'
+import img2 from './img-2.png';
+import img3 from './img-3.png';
+import img4 from './img-4.png';
 
 function App() {
   return (
@@ -34,6 +36,32 @@ function App() {
           eiusmod tempor incididunt ut <br />
           labore et dolore magna aliqua .</p>
         </div>
+        <div className="section-2-3">
+        <img
+          src={img3}
+          alt=""
+          className="img"
+        ></img>
+        <h1>Sara  smith</h1>
+        <p>Lorem ipsum dolor sit amet,<br />
+          consectetur adipiscing elit, sed do<br /> 
+          eiusmod tempor incididunt ut <br />
+          labore et dolore magna aliqua .</p>
+        </div>
+      </div>
+      <div className="section-3">
+        <img src={img4} alt="" className="sec-img">
+        </img>
+        <from>
+        <h1>Subscribe</h1>
+        <h4>to our newsletter</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<br/>
+          sed do eiusmod tempor incididunt .</p>
+        <input className="name" placeholder="Name"></input><br/><br/><br/>
+        <input className="mail" placeholder="Mail"></input><br/><br/><br/>
+        <input className="message" placeholder="Message"></input><br/><br/><br/>
+        <button className="btn">Send Message</button>
+        </from>
       </div>
     </div>
   );
