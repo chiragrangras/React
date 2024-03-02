@@ -97,6 +97,83 @@
   color: #aeaeae;
   text-align: center;
 }
+.section-2-3{
+  font-family: "Krub";
+  font-weight: 700;
+}
+
+.section-2-3 h1{
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #aeaeae;
+}
+.section-2-3 p{
+  margin: 0px 0px 30px 0px;
+  font-size: 13px;
+  color: #aeaeae;
+  text-align: center;
+}
+.section-3{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  font-weight: 700;
+  font-family: "Krub";
+}
+.sec-img{
+  width: 500px;
+  height: 590px;
+  filter:grayscale(100%);
+}
+.section-3 h1{
+  margin: 0px;
+  font-size: 47px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.section-3 h4{
+  margin: 0px;
+  font-size: 46px;
+  color: #8a6dc7;
+}
+input{
+  font-weight: 700;
+  font-family: "Krub";
+  border: 3px solid #8a6dc7;
+  background-color: black;
+  text-align: left;
+}
+.name{
+  padding: 10px 50px 10px 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+.mail{
+  padding: 10px 50px 10px 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.message{
+  padding: 10px 50px 80px 10px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #6a6a6a;
+}
+
+.btn{
+  margin: 20px;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #8a6dc7;
+  text-transform: uppercase;
+  color: #f1f1f1;
+  font-weight: 700;
+  font-family: "Oswald";
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
