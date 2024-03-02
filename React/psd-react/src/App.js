@@ -4,6 +4,7 @@ import img2 from './img-2.png';
 import img3 from './img-3.png';
 import img4 from './img-4.png';
 
+
 function App() {
   return (
     <div className="App">
@@ -62,6 +63,31 @@ function App() {
         <input className="message" placeholder="Message"></input><br/><br/><br/>
         <button className="btn">Send Message</button>
         </from>
+      </div>
+      <div className="footer">
+        <div className="about">
+          <h1><u>About</u></h1>
+          <p>History</p>
+          <p>Our Team</p>
+          <p>Mission Statement</p>
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div className="whatwedo">
+          <h1><u>What we do</u></h1>
+          <p>News and stories</p>
+          <p>Publications</p>
+          <p>Take action</p>
+          <p>Recomendations</p>
+          <p>Help</p>
+        </div>
+        <div className="signup">
+          <h1>Sign Up To Receive<br/>
+              ___Our Newsletter</h1>
+          <input></input>
+          <p>Follow us!</p>
+                    
+        </div>
       </div>
     </div>
   );
