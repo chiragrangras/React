@@ -14,6 +14,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import Toast from 'react-bootstrap/Toast';
+import Footer from "./Footer";
 
 
 function App() {
@@ -154,7 +155,7 @@ function App() {
           </Toast.Body>
         </Toast>
       ))}
-      
+      <Footer/>
     </div>
   );
 }
