@@ -216,7 +216,13 @@ input{
   border: 4px solid #e6e6e6;
 }
 
-.signup p{
+.footer-icon{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+.footer-icon p{
   color: #e6e6e6;
 }
 
