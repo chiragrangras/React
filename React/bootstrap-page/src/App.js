@@ -9,8 +9,20 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Col, Row, Image } from "react-bootstrap";
 import Img2 from './img-2.png';
+import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+import Toast from 'react-bootstrap/Toast';
+
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const now = 70;
+
   return (
     <div className="App">
       <Navbar bg="primary" data-bs-theme="dark">
@@ -50,7 +62,9 @@ function App() {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-
+      <br/>
+      <br/>
+      {/* Button */}
       {["Primary", "Secondary", "Success", "Info", "Warning", "Danger"].map(
         (variant) => (
           <DropdownButton
@@ -70,14 +84,77 @@ function App() {
           </DropdownButton>
         )
       )}
-
+      <br/>
+      <br/>
+      {/* Image cirecle */}
       <Container>
         <Row>
           <Col xs={6} md={4}>
           <Image src={Img2} roundedCircle />
           </Col>
+          <Col xs={6} md={4}>
+          <Image src={Img2} roundedCircle />
+          </Col>
+          <Col xs={6} md={4}>
+          <Image src={Img2} roundedCircle />
+          </Col>
         </Row>
       </Container>
+      <br/>
+      <br/>
+      {/* Modal */}
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+      
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <br/>
+      <br/>
+      {/* Progress bars */}
+      <ProgressBar animated now={now} label={`${now}%`} />
+      {/* Toasts */}
+      <br/>
+      <br/>
+      {[
+        'Primary',
+        'Success',
+        'Danger',
+        'Warning',
+        'Info',
+      ].map((variant, idx) => (
+        <Toast
+          className="d-inline-block m-1"
+          bg={variant.toLowerCase()}
+          key={idx}
+        >
+          <Toast.Header>
+            <img
+              src="holder.js/20x20?text=%20"
+              className="rounded me-2"
+              alt=""
+            />
+            <strong className="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+          </Toast.Header>
+          <Toast.Body className={variant === 'Dark' && 'text-white'}>
+            Hello, world! This is a toast message.
+          </Toast.Body>
+        </Toast>
+      ))}
+      
     </div>
   );
 }
