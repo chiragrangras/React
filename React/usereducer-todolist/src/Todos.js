@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 let initialState = [];
 function reducer(state, action) {
@@ -7,7 +7,7 @@ function reducer(state, action) {
     return [
       ...state,
       {
-        id: state.lenght +1,
+        id: state.length +1,
         name : action.name
       }
     ]
@@ -17,15 +17,16 @@ function reducer(state, action) {
 }
 let Todos = () => {
   let [todos, dispatch] = useReducer(reducer, initialState);
+  let [task,setTask] = useState('');
 
   return (
     <>
       {/* <h4>Todo List {todos.length}</h4> */}
       <label>Enter New Task: &nbsp;</label>
-      <input type="text" 
-        onChange={(e)=>{
-          dispatch({type: 'Add_Task', name:e.target.value}
-          )}}/>
+      <input type="text" value={task} onChange={(e)=>{setTask(e.target.value)}} />
+      <button onClick={()=>{
+          dispatch({type: 'Add_Task', name:task}
+          )}}>Add</button>
           {todos.map(todo => <li key={todo.id}>{todo.name}</li>)}
     </>
   );
