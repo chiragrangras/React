@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faSquareInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   return (
