@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.language img{
+  width: 30px;
+  border-radius: 50px;
+}
+
+.service{
+  width: 40px;
+  fill: white;
+}
+
+.nav-bar{
+  background-color: rgba(19, 111, 254, 1);
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.stay svg{
+  width: 20px;
+  fill: white;
+}
+
+.stay{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  margin-left:20px;
+}
+
+.flights svg{
+  width: 20px;
+  fill: white;
+}
+
+.flights{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.flight_hotel svg{
+  width: 20px;
+  fill: white;
+}
+
+.flight_hotel{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.car_rentals svg{
+  width: 20px;
+  fill: white;
+}
+
+.car_rentals{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.attractions svg{
+  width: 20px;
+  fill: white;
+}
+
+.attractions{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.airport_taxis svg{
+  width: 20px;
+  fill: white;
+}
+
+.airport_taxis{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.going{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 30px;
+}
+
+.going svg{
+  width: 20px;
+  background-color: white;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
