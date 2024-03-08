@@ -14,7 +14,7 @@ function Header() {
         <Navbar bg="primary" data-bs-theme="dark">
           <Container>
             <Col md={6} className="d-flex justify-content-start">
-              <Navbar.Brand href="#home">Booking.com</Navbar.Brand>
+              <Navbar.Brand href="/">Booking.com</Navbar.Brand>
             </Col>
             <Col md={6} className="d-flex justify-content-end">
               <Nav className="me-auto">
