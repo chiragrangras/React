@@ -34,10 +34,9 @@
   align-items: center;
   gap: 4px;
   background-color: rgba(19, 111, 254, 1);
-  border: 1px solid white;
+  border: none;
   color: white;
   border-radius: 10px;
-  margin-left:20px;
 }
 
 .flights svg{
@@ -127,6 +126,56 @@
   width: 20px;
   background-color: white;
 }
+
+.check-in{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 30px;
+}
+
+.check-in svg{
+  width: 20px;
+  background-color: white;
+}
+
+.banner-img {
+  background-image: url(./banner-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.ml-5{
+  margin-left: 5%;
+}
+
+.banner-h-font{
+  color: #fff;
+  font-family: sans-serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+p{
+  color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.discover-btn{
+  background-color: blue;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  padding: 7px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
