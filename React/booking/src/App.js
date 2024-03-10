@@ -13,7 +13,6 @@ function App() {
           <Route path="/search" element={<Search/>}></Route>
         </Routes>
       </BrowserRouter>
-      
     </div>
   );
 }
