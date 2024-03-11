@@ -114,7 +114,22 @@
   border-radius: 10px;
 }
 
-.going{
+.destination{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 30px;
+  padding-right: 100px;
+}
+
+.destination svg{
+  width: 20px;
+  background-color: white;
+  margin: 0px 10px;
+}
+
+.travel-date{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -122,22 +137,45 @@
   margin: 10px 0px 0px 30px;
 }
 
-.going svg{
+.travel-date svg{
   width: 20px;
   background-color: white;
+  margin: 0px 10px;
 }
 
-.check-in{
+.person-count {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border:5px solid orange;
-  margin: 10px 0px 0px 30px;
+  margin: 10px 0px 0px 10px;
 }
 
-.check-in svg{
+.person-count svg{
   width: 20px;
   background-color: white;
+  margin: 0px 10px;
+}
+
+.person-count-popup{
+  width: 285px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #ddc99f;
+  border-radius: 10px;
+  position: absolute;
+  top: 110%;
+  right: 22%;
+}
+
+.search-btn{
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border:5px solid orange;
+  margin: 10px 30px 0px 30px;
+  padding: 10px 50px;
+  text-decoration: none;
 }
 
 .banner-img {
@@ -145,6 +183,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 370px;
 }
 
 .ml-5{
@@ -173,7 +212,18 @@ p{
   font-size: 30px;
   font-family: sans-serif;
   border-radius: 10px;
-  padding: 7px;
+  padding: 10px;
+}
+
+.text-align-left{
+  text-align: left;
+}
+
+.person-count-popup-btn{
+  border: 1px solid blue;
+  background-color: #fff;
+  color: blue;
+  padding: 5px 100px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -192,6 +242,7 @@ p{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 
 .App-link {
   color: #61dafb;
