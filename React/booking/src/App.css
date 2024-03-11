@@ -135,6 +135,7 @@
   align-items: center;
   border:5px solid orange;
   margin: 10px 0px 0px 30px;
+  cursor: pointer;
 }
 
 .travel-date svg{
@@ -149,6 +150,7 @@
   align-items: center;
   border:5px solid orange;
   margin: 10px 0px 0px 10px;
+  cursor: pointer;
 }
 
 .person-count svg{
@@ -213,6 +215,7 @@ p{
   font-family: sans-serif;
   border-radius: 10px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .text-align-left{
