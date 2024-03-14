@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
 
   let [details, setDetails] = useState();
   
+  let navigate = useNavigate();
+
   useEffect(() => {
     fetch("http://localhost:4000/employees")
       .then((res) => {
@@ -16,6 +18,12 @@ function Home() {
         setDetails(data);
       });
   }, []);
+
+  let handleView = (id)=>{
+    console.log(id)
+    // navigate(`/viewemp/${id}`)
+    navigate('/viewemp/'+ id)
+  }
 
   return (
     <div>
@@ -47,7 +55,7 @@ function Home() {
                         <td>{emp.name}</td>
                         <td>{emp.salary}</td>
                         <td>
-                          <button className="btn bg-info">View</button>
+                          <button onClick={()=>{handleView(`${emp.id}`)}} className="btn bg-info">View</button>
                           <button className="btn bg-success mx-3">Edit</button>
                           <button className="btn bg-danger">Delete</button>
                         </td>
