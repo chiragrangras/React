@@ -7,7 +7,7 @@ function Home() {
   let [details, setDetails] = useState();
   
   useEffect(() => {
-    fetch("http://localhost:4001/employees")
+    fetch("http://localhost:4000/employees")
       .then((res) => {
         return res.json();
       })
