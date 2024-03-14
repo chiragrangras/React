@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 function AddEmp() {
   let [name, setName] = useState("");
   let [salary, setSalary] = useState("");
-  let [invalidName, setInvalidName] = useState(false);
 
   let navigate = useNavigate();
 
@@ -16,7 +15,7 @@ function AddEmp() {
     let data = { name, salary };
     // console.log(data);
 
-    fetch("http://localhost:4001/employees", {
+    fetch("http://localhost:4000/employees", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -48,16 +47,12 @@ function AddEmp() {
                 onChange={(e) => {
                   setName(e.target.value);
                 }}
-                onBlur={(e) => {
-                  if (name.length == 0) {
-                    setInvalidName(true);
-                  } else {
-                    setInvalidName(false);
-                  }
-                }}
+                
                 className="form-control"
               />
-              {invalidName && <span className="text-danger">* Enter Name</span>}
+              {
+                name.length === 0 && <span className="text-danger">* Enter Name</span>
+              }
             </div>
             <div className="mb-3">
               <label className="form-label">Salary</label>
@@ -70,7 +65,6 @@ function AddEmp() {
                 className="form-control"
               />
             </div>
-
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
