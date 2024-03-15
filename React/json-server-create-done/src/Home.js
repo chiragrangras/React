@@ -27,7 +27,7 @@ function Home() {
 
   let handleEdit = (id)=>{
     console.log(id)
-    navigate('/editemp/:eid'+ id)
+    navigate('/editemp/'+ id)
   }
 
   return (
