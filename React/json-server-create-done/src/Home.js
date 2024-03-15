@@ -25,6 +25,11 @@ function Home() {
     navigate('/viewemp/'+ id)
   }
 
+  let handleEdit = (id)=>{
+    console.log(id)
+    navigate('/editemp/:eid'+ id)
+  }
+
   return (
     <div>
       <div className="container">
@@ -55,8 +60,8 @@ function Home() {
                         <td>{emp.name}</td>
                         <td>{emp.salary}</td>
                         <td>
-                          <button onClick={()=>{handleView(`${emp.id}`)}} className="btn bg-info">View</button>
-                          <button className="btn bg-success mx-3">Edit</button>
+                          <button onClick={()=>{handleView(emp.id)}} className="btn bg-info">View</button>
+                          <button onClick={()=>{handleEdit(`${emp.id}`)}} className="btn bg-success mx-3">Edit</button>
                           <button className="btn bg-danger">Delete</button>
                         </td>
                       </tr>
