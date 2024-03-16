@@ -3,27 +3,32 @@
     {
       "id": "1",
       "name": "Pankaj",
-      "salary": "10000"
+      "salary": "10000",
+      "email" : "pankaj@gmail.com"
     },
     {
       "id": "2",
       "name": "David",
-      "salary": "50000"
+      "salary": "50000",
+      "email" : "david@hotmail.com"
     },
     {
       "id": "a2bf",
       "name": "Jon",
-      "salary": "60000"
+      "salary": "60000",
+      "email" : "jon@yahoo.com"
     },
     {
       "id": "b004",
       "name": "Jack",
-      "salary": "40000"
+      "salary": "40000",
+      "email" : "jack@hotmail.com"
     },
     {
       "id": "c90e",
       "name": "Jackson",
-      "salary": "70000"
+      "salary": "70000",
+      "email" : "jackson@hotmail.com"
     }
   ]
 }
