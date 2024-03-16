@@ -23,7 +23,26 @@ function EditEmp() {
     })
   },[])
 
-  let handleSubmit = (e) => {};
+  let handleSubmit = (e) => {
+    e.preventDefault();
+
+    let data = {name,email,salary}
+    // console.log(data)
+
+    fetch('http://localhost:4000/employees/'+eid,{
+      method:"PUT",
+      headers:{"content-type":"application/json"},
+      body:JSON.stringify(data)
+    })
+    .then((res)=>{
+      // return res.json()
+      if(res){
+        alert("Update...!");
+        navigate('/');
+      }
+    })
+    // .then((data)=>{console.log(data)})
+  };
 
   return (
     <div>
@@ -46,7 +65,9 @@ function EditEmp() {
             <div className="mb-3">
               <label className="form-label">Name</label>
               <input
-                type="text"          
+                type="text"
+                value={name}
+                onChange={(e)=>{setName(e.target.value)}}
                 className="form-control"
               />
             </div>
@@ -54,6 +75,8 @@ function EditEmp() {
               <label className="form-label">Email</label>
               <input
                 type="text"
+                value={email}
+                onChange={(e)=>{setEmail(e.target.value)}}
                 className="form-control"
               />
             </div>
@@ -61,6 +84,8 @@ function EditEmp() {
               <label className="form-label">Salary</label>
               <input
                 type="text"
+                value={salary}
+                onChange={(e)=>{setSalary(e.target.value)}}
                 className="form-control"
               />
             </div>
