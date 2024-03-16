@@ -4,31 +4,31 @@
       "id": "1",
       "name": "Pankaj",
       "salary": "10000",
-      "email" : "pankaj@gmail.com"
+      "email": "pankaj@gmail.com"
     },
     {
-      "id": "2",
       "name": "David",
+      "email": "david@hotmail.com",
       "salary": "50000",
-      "email" : "david@hotmail.com"
+      "id": "2"
     },
     {
       "id": "a2bf",
       "name": "Jon",
       "salary": "60000",
-      "email" : "jon@yahoo.com"
+      "email": "jon@yahoo.com"
     },
     {
-      "id": "b004",
       "name": "Jack",
+      "email": "jack@hotmail.com",
       "salary": "40000",
-      "email" : "jack@hotmail.com"
+      "id": "b004"
     },
     {
       "id": "c90e",
       "name": "Jackson",
       "salary": "70000",
-      "email" : "jackson@hotmail.com"
+      "email": "jackson@hotmail.com"
     }
   ]
 }
