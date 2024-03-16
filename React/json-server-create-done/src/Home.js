@@ -47,6 +47,7 @@ function Home() {
                   <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Email</th>
                     <th>Salary</th>
                     <th>Actions</th>
                   </tr>
@@ -58,6 +59,7 @@ function Home() {
                       <tr>
                         <td>{emp.id}</td>
                         <td>{emp.name}</td>
+                        <td>{emp.email}</td>
                         <td>{emp.salary}</td>
                         <td>
                           <button onClick={()=>{handleView(emp.id)}} className="btn bg-info">View</button>
