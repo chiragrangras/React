@@ -6,6 +6,7 @@ function ViewEmp(){
 
     let [id1,setId1] = useState('');
     let [Name,setName] = useState('');
+    let [Email, setEmail] = useState('');
     let [Salary,setSalary] = useState('');
     const {id} = useParams();
     // console.log(id)
@@ -17,6 +18,7 @@ function ViewEmp(){
         .then((data)=>{
             setId1(data.id)
             setName(data.name)
+            setEmail(data.email)
             setSalary(data.salary)
         })
 
@@ -25,6 +27,7 @@ function ViewEmp(){
         <div>
             <h2>ID : {id1} </h2>
             <p>Name : {Name} </p>
+            <p>Email : {Email}</p>
             <p>Salary : {Salary} </p>
         </div>
     )
