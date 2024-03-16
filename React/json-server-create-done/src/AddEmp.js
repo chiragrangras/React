@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function AddEmp() {
   let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
   let [salary, setSalary] = useState("");
 
   let navigate = useNavigate();
@@ -12,7 +13,7 @@ function AddEmp() {
     // console.log(e);
     // console.log(name,salary);
     // console.log({name,salary});
-    let data = { name, salary };
+    let data = { name,email,salary };
     // console.log(data);
 
     fetch("http://localhost:4000/employees", {
@@ -52,6 +53,20 @@ function AddEmp() {
               />
               {
                 name.length === 0 && <span className="text-danger">* Enter Name</span>
+              }
+            </div>
+            <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                className="form-control"
+              />
+              {
+                email.length === 0 && <span className="text-danger">* Enter Email</span>
               }
             </div>
             <div className="mb-3">
