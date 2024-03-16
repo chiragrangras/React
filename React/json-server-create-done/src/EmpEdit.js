@@ -6,6 +6,7 @@ function EditEmp() {
 
   let [id1,setId1] = useState('');
   let [name,setName] = useState('');
+  let [email, setEmail] = useState('');
   let [salary,setSalary] = useState('');
 
   let {eid} = useParams();
@@ -17,6 +18,7 @@ function EditEmp() {
     .then((data)=>{
       setId1(data.id)
       setName(data.name)
+      setEmail(data.email)
       setSalary(data.salary)
     })
   },[])
@@ -49,6 +51,13 @@ function EditEmp() {
               />
             </div>
             <div className="mb-3">
+              <label className="form-label">Email</label>
+              <input
+                type="text"
+                className="form-control"
+              />
+            </div>
+            <div className="mb-3">
               <label className="form-label">Salary</label>
               <input
                 type="text"
@@ -56,7 +65,7 @@ function EditEmp() {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Submit
+              Save
             </button>
           </div>
         </form>
