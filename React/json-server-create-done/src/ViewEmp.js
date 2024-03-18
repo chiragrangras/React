@@ -27,18 +27,18 @@ function ViewEmp() {
       <table className="table">
         <thead className="table-info">
             <tr>
-                <td>
-                    <img src={img} alt="" width={400} height={300}></img>
+                <td rowSpan={4} style={{width:"25%"}}>
+                    <img src={img} alt="" width={200} height={200}></img>
                 </td>
             </tr>
           <tr>
-            <td>Name : {Name}</td>
+            <td className="text-align-left">Name : {Name}</td>
           </tr>
           <tr>
-            <td>Email : {Email}</td>
+            <td className="text-align-left">Email : {Email}</td>
           </tr>
           <tr>
-            <td>Salary : {Salary}</td>
+            <td className="text-align-left">Salary : {Salary}</td>
           </tr>
         </thead>
       </table>
