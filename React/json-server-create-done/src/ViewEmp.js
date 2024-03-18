@@ -4,9 +4,9 @@ import img from './Img-1.jpg';
 
 function ViewEmp() {
   let [id1, setId1] = useState("");
-  let [Name, setName] = useState("");
-  let [Email, setEmail] = useState("");
-  let [Salary, setSalary] = useState("");
+  let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
+  let [salary, setSalary] = useState("");
   const { id } = useParams();
   // console.log(id)
 
@@ -32,13 +32,13 @@ function ViewEmp() {
                 </td>
             </tr>
           <tr>
-            <td className="text-align-left">Name : {Name}</td>
+            <td className="text-align-left">Name : {name}</td>
           </tr>
           <tr>
-            <td className="text-align-left">Email : {Email}</td>
+            <td className="text-align-left">Email : {email}</td>
           </tr>
           <tr>
-            <td className="text-align-left">Salary : {Salary}</td>
+            <td className="text-align-left">Salary : {salary}</td>
           </tr>
         </thead>
       </table>
