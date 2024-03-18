@@ -56,7 +56,7 @@ function Home() {
                   {/* {console.log(details)} */}
                   {details &&
                     details.map((emp) => (
-                      <tr>
+                      <tr key={emp.id}>
                         <td>{emp.id}</td>
                         <td>{emp.name}</td>
                         <td>{emp.email}</td>
