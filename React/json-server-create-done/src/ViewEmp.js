@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import img from './Img-1.jpg';
+import file from './Img-1.jpg';
 
 function ViewEmp() {
   let [id1, setId1] = useState("");
@@ -28,7 +28,7 @@ function ViewEmp() {
         <thead className="table-info">
             <tr>
                 <td rowSpan={4} style={{width:"25%"}}>
-                    <img src={img} alt="" width={200} height={200}></img>
+                    <img src={file} alt="" width={200} height={200}></img>
                 </td>
             </tr>
           <tr>
