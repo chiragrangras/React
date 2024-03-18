@@ -13,7 +13,7 @@ function AddEmp() {
     // console.log(e);
     // console.log(name,salary);
     // console.log({name,salary});
-    let data = { name,email,salary };
+    let data = { file,name,email,salary };
     // console.log(data);
 
     fetch("http://localhost:4000/employees", {
@@ -32,29 +32,38 @@ function AddEmp() {
     // })
   };
 
+  let [file,setFile] = useState();
+  function handleChange(e){
+    console.log(e.target.file)
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
+
   return (
     <div>
       <div className="container w-50 text-start">
         <div>
           <h2>Create Employee</h2>
+          <h5>Add Image :- </h5>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} onChange={handleChange}>
           <div className="form-group">
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setName(e.target.value);
-                }}
-                
-                className="form-control"
-              />
-              {
-                name.length === 0 && <span className="text-danger">* Enter Name</span>
-              }
-            </div>
+              <input type="file" onChange={handleChange} />
+              <img src={file} alt=""/>
+              <div className="mb-3">
+                <label className="form-label">Name</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
+                  
+                  className="form-control"
+                />
+                {
+                  name.length === 0 && <span className="text-danger">* Enter Name</span>
+                }
+              </div>
             <div className="mb-3">
               <label className="form-label">Email</label>
               <input
