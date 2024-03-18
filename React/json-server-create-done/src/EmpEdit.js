@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 
 function EditEmp() {
   let navigate = useNavigate();
-
   let [id1,setId1] = useState('');
   let [name,setName] = useState('');
   let [email, setEmail] = useState('');
