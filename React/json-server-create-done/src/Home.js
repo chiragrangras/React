@@ -115,8 +115,8 @@ function Home() {
                           {confirmationId === emp.id &&(
                             <div className="confirmation-dialog">
                               <p>Are you sure you want to delete?</p>
-                              <button onClick={()=>handleConfirmDelete(emp.id)}>Yes</button>
-                              <button onClick={handleCancelDelete}>No</button>
+                              <button className='mx-2 btn btn-danger' onClick={()=>handleConfirmDelete(emp.id)}>Yes</button>
+                              <button className='mx-2 btn btn-primary' onClick={handleCancelDelete}>No</button>
                             </div>
                           )}
                         </td>
