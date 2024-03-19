@@ -27,9 +27,6 @@ function AddEmp() {
         navigate("/");
       }
     });
-    // .then((data)=>{
-    //   console.log(data)
-    // })
   };
 
   let [file,setFile] = useState();
@@ -43,11 +40,11 @@ function AddEmp() {
       <div className="container w-50 text-start">
         <div>
           <h2>Create Employee</h2>
-          <h5>Add Image :- </h5>
+          <h5>Add Image :-</h5>
         </div>
         <form onSubmit={handleSubmit} onChange={handleChange}>
           <div className="form-group">
-              <input type="file" onChange={handleChange} />
+              <input className='my-4' type="file" onChange={handleChange} />
               <img src={file} alt=""/>
               <div className="mb-3">
                 <label className="form-label">Name</label>
