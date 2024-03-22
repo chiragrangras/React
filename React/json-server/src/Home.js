@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   let [details, setDetails] = useState();
@@ -23,7 +24,7 @@ function Home() {
         </div>
 
         <div>
-          <button className="btn btn-primary my-3">Add Employee</button>
+          <Link to='/addemp' className="btn btn-primary my-3">Add Employee</Link>
         </div>
 
         <div className="contanier">
