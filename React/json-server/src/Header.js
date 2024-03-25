@@ -13,8 +13,8 @@ function Header(){
             <Routes>
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/addemp' element={<AddEmp/>}></Route>
-                <Route path='/viewemp' element={<ViewEmp/>}></Route>
-                <Route path='editemp' element={<EditEmp/>}></Route>
+                <Route path='/viewemp/:id' element={<ViewEmp/>}></Route>
+                <Route path='/editemp/:eid' element={<EditEmp/>}></Route>
             </Routes>
 
         </div>
