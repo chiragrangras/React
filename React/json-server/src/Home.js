@@ -18,8 +18,12 @@ function Home() {
       });
   }, []);
 
-  let handleEdit = ()=>{
-    navigate('/editemp')
+  let handleView = (id)=>{
+    navigate('/viewemp/'+id)
+  }
+
+  let handleEdit = (id)=>{
+    navigate('/editemp/'+id)
   }
 
   return (
@@ -56,8 +60,8 @@ function Home() {
                         <td>{emp.email}</td>
                         <td>{emp.salary}</td>
                         <td>
-                          <Link to='/viewemp' className="btn btn-info">View</Link>
-                          <button onClick={handleEdit} className="btn btn-success mx-3">Edit</button>
+                          <button onClick={()=>{handleView(`${emp.id}`)}} className="btn btn-info">View</button>
+                          <button onClick={()=>{handleEdit(`${emp.id}`)}} className="btn btn-success mx-3">Edit</button>
                           <button className="btn btn-danger">Delete</button>
                         </td>
                       </tr>
