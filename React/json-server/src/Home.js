@@ -18,13 +18,39 @@ function Home() {
       });
   }, []);
 
-  let handleView = (id)=>{
-    navigate('/viewemp/'+id)
-  }
+  let handleView = (id) => {
+    navigate("/viewemp/" + id);
+  };
 
-  let handleEdit = (id)=>{
-    navigate('/editemp/'+id)
-  }
+  let handleEdit = (id) => {
+    navigate("/editemp/" + id);
+  };
+
+  let [confirmationId, setConfirmationId] = useState("");
+
+  let handleDelete = (id) => {
+    setConfirmationId(id);
+  };
+
+  let handleConfirmDelete = (id) => {
+    fetch("http://localhost:4000/employees/" + id, {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+    }).then((res) => {
+      fetch("http://localhost:4000/employees")
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          setDetails(data);
+        });
+    });
+    setConfirmationId("");
+  };
+
+  const handleCancelDelete = () => {
+    setConfirmationId("");
+  };
 
   return (
     <div>
@@ -34,7 +60,9 @@ function Home() {
         </div>
 
         <div>
-          <Link to='/addemp' className="btn btn-primary my-3">Add Employee</Link>
+          <Link to="/addemp" className="btn btn-primary my-3">
+            Add Employee
+          </Link>
         </div>
 
         <div className="contanier">
@@ -60,9 +88,47 @@ function Home() {
                         <td>{emp.email}</td>
                         <td>{emp.salary}</td>
                         <td>
-                          <button onClick={()=>{handleView(`${emp.id}`)}} className="btn btn-info">View</button>
-                          <button onClick={()=>{handleEdit(`${emp.id}`)}} className="btn btn-success mx-3">Edit</button>
-                          <button className="btn btn-danger">Delete</button>
+                          <button
+                            onClick={() => {
+                              handleView(`${emp.id}`);
+                            }}
+                            className="btn btn-info"
+                          >
+                            View
+                          </button>
+                          <button
+                            onClick={() => {
+                              handleEdit(`${emp.id}`);
+                            }}
+                            className="btn btn-success mx-3"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            onClick={() => {
+                              handleDelete(`${emp.id}`);
+                            }}
+                            className="btn btn-danger"
+                          >
+                            Delete
+                          </button>
+                          {confirmationId === emp.id && (
+                            <div className="confirmation-dialog">
+                              <p>Are you sure you want to delete?</p>
+                              <button
+                                className="mx-2 btn btn-danger"
+                                onClick={() => handleConfirmDelete(emp.id)}
+                              >
+                                Yes
+                              </button>
+                              <button
+                                className="mx-2 btn btn-primary"
+                                onClick={handleCancelDelete}
+                              >
+                                No
+                              </button>
+                            </div>
+                          )}
                         </td>
                       </tr>
                     ))}
