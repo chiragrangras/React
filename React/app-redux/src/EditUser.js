@@ -5,22 +5,23 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 function EditUser() {
-  let {id} = useParams(); 
-  // console.log(id) 
+  let { id } = useParams();
+  // console.log(id)
   let users = useSelector((state) => state.user);
   // console.log(users)
 
-  let existingUser = users.filter((user)=>{
-    return user.id == id
-  })
+  let existingUser = users.filter((user) => {
+    return user.id == id;
+  });
 
   // arr =[1,2,3]
   // let [x,y] = arr
   // console.log(existingUser[0]);
 
-  let {name,email,phone} = existingUser[0]
+  let { name, email, phone } = existingUser[0];
   // console.log(name,email)
 
+  let [id1,setId] = useState(id)
   let [uname, setuName] = useState(name);
   let [uemail, setuEmail] = useState(email);
   let [uphone, setuPhone] = useState(phone);
@@ -33,8 +34,7 @@ function EditUser() {
 
   let handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(editUser({id:id, name: uname, email: uemail, phone: uphone })
-    );
+    dispatch(editUser({ id: id1, name: uname, email: uemail, phone: uphone }));
     nav("/home");
   };
 
@@ -47,6 +47,19 @@ function EditUser() {
         <div className="row justify-content-center">
           <div className="col-6">
             <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Id</label>
+                <input
+                  type="text"
+                  value={id1}
+                  onChange={(e) => {
+                    setId(e.target.value);
+                  }}
+                  disabled
+                  className="form-control"
+                  placeholder="Name"
+                />
+              </div>
               <div className="form-group">
                 <label>Name</label>
                 <input
