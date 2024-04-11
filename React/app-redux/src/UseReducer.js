@@ -17,10 +17,18 @@ export let userSlice = createSlice({
 
             let {id,name,email,phone} = action.payload
             // console.log(id,name,email,phone)
+            console.log(id)
+            console.log(name)
 
-            state.filter((user)=>{
+            let user1 = state.find((user)=>{
                 return user.id == id
             })
+            if(user1)
+            {
+               user1.name = name;
+               user1.email = email;
+               user1.phone = phone;
+            }
         },
 
         // deleteUser: (state,action)=>{
