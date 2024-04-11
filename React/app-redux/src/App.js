@@ -3,6 +3,7 @@ import './App.css';
 import Home from './Home';
 import AddUser from './AddUser'
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import EditUser from './EditUser';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/adduser' element={<AddUser/>}></Route>
+        <Route path='/edituser/:id' element={<EditUser/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
