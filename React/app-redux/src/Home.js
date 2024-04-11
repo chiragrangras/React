@@ -1,10 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   let users = useSelector((state) => state.user);
   // console.log(users);
+
+  let navigate = useNavigate();
+
+  let handleEdit = (id) =>{
+
+    navigate('/edituser/'+id)
+
+  }
+
   return (
     <div>
       <div className="container">
@@ -32,7 +42,7 @@ function Home() {
                    <td>{user.phone}</td>
                    <td>
                      <button className="btn btn-info">View</button>
-                     <button className="btn btn-success mx-2">Edit</button>
+                     <button onClick={()=>{handleEdit(user.id)}} className="btn btn-success mx-2">Edit</button>
                      <button className="btn btn-danger">Delete</button>
                    </td>
                  </tr>
