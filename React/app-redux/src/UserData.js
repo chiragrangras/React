@@ -1,4 +1,3 @@
-
 export let users = [
     {
         id:1,
@@ -10,12 +9,12 @@ export let users = [
         id:2,
         name:'Vishal',
         email:'vishal28@hotmail.com',
-        'phone': 6368223
+        'phone': 6323572
     },
     {
         id:3,
         name:'Chirag',
         email:'chirag25@yahoo.com',
-        'phone': 6368223
+        'phone': 1246492
     }
 ]
