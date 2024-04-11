@@ -6,9 +6,10 @@ export let userSlice = createSlice({
     initialState:users,
     reducers:{
 
-        // addUser: (state,action)=>{
-
-        // },
+        addUser: (state,action)=>{
+            console.log(state)
+            // console.log(action.payload)
+        },
 
         // editUser: (state,action)=>{
             
@@ -21,4 +22,5 @@ export let userSlice = createSlice({
     }
 })
 
+export const {addUser} = userSlice.actions
 export default userSlice.reducer;
