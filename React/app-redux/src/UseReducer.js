@@ -13,8 +13,6 @@ export let userSlice = createSlice({
         },
 
         editUser: (state,action)=>{
-            state.push(action.payload)
-
             let {id,name,email,phone} = action.payload
             // console.log(id,name,email,phone)
             console.log(id)
@@ -27,7 +25,7 @@ export let userSlice = createSlice({
             {
                user1.name = name;
                user1.email = email;
-               user1.phone = phone;
+               user1.phone = phone
             }
         },
 
