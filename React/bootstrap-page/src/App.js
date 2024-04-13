@@ -17,7 +17,7 @@ import Modal from "react-bootstrap/Modal";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import Toast from "react-bootstrap/Toast";
 import Footer from "./Footer";
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -27,17 +27,18 @@ function App() {
   const now = 70;
 
   return (
-    <div className="App">
+    <div classNameName="App">
       <Navbar bg="primary" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav classNameName="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
+      
 
       <Accordion defaultActiveKey="0">
         <Accordion.Item eventKey="0">
@@ -78,10 +79,10 @@ function App() {
             title={variant}
           >
             <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-            <Dropdown.Item eventKey="2" active>Another action</Dropdown.Item>
-            <Dropdown.Item eventKey="3" >
-              Active Item
+            <Dropdown.Item eventKey="2" active>
+              Another action
             </Dropdown.Item>
+            <Dropdown.Item eventKey="3">Active Item</Dropdown.Item>
             <Dropdown.Divider />
             <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
           </DropdownButton>
@@ -91,15 +92,15 @@ function App() {
       <br />
       {/* Image cirecle */}
       <Container>
-        <Row className="flex-xs-column">
+        <Row classNameName="flex-xs-column">
           <Col xs={6} md={4}>
-            <Image src={Img2} roundedCircle className="img-fluid"/>
+            <Image src={Img2} roundedCircle classNameName="img-fluid" />
           </Col>
           <Col xs={6} md={4}>
-            <Image src={Img2} roundedCircle className="img-fluid"/>
+            <Image src={Img2} roundedCircle classNameName="img-fluid" />
           </Col>
           <Col xs={6} md={4}>
-            <Image src={Img2} roundedCircle className="img-fluid"/>
+            <Image src={Img2} roundedCircle classNameName="img-fluid" />
           </Col>
         </Row>
       </Container>
@@ -143,7 +144,7 @@ function App() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-        <img src={Img1} alt=""></img>
+          <img src={Img1} alt=""></img>
           <Carousel.Caption>
             <h3>Third slide label</h3>
             <p>
@@ -162,20 +163,20 @@ function App() {
       {["Primary", "Success", "Danger", "Warning", "Info"].map(
         (variant, idx) => (
           <Toast
-            className="d-inline-block m-1"
+            classNameName="d-inline-block m-1"
             bg={variant.toLowerCase()}
             key={idx}
           >
             <Toast.Header>
               <img
                 src="holder.js/20x20?text=%20"
-                className="rounded me-2"
+                classNameName="rounded me-2"
                 alt=""
               />
-              <strong className="me-auto">Bootstrap</strong>
+              <strong classNameName="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
-            <Toast.Body className={variant === "Dark" && "text-white"}>
+            <Toast.Body classNameName={variant === "Dark" && "text-white"}>
               Hello, world! This is a toast message.
             </Toast.Body>
           </Toast>
