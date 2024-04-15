@@ -1,18 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { deleteUser } from './UseReducer';
 
 function Home() {
   let users = useSelector((state) => state.user);
   // console.log(users);
 
   let navigate = useNavigate();
+  let dispatch = useDispatch();
 
   let handleEdit = (id) =>{
-
+    // console.log(id)
     navigate('/edituser/'+id)
+  }
 
+  let handleDelete = (id1) =>{
+    // console.log(id)
+    dispatch(deleteUser({id:id1}))
   }
 
   return (
@@ -43,7 +49,7 @@ function Home() {
                    <td>
                      <button className="btn btn-info">View</button>
                      <button onClick={()=>{handleEdit(user.id)}} className="btn btn-success mx-2">Edit</button>
-                     <button className="btn btn-danger">Delete</button>
+                     <button onClick={()=>{handleDelete(user.id)}} className="btn btn-danger">Delete</button>
                    </td>
                  </tr>
                 ))}

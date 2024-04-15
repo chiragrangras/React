@@ -29,12 +29,22 @@ export let userSlice = createSlice({
             }
         },
 
-        // deleteUser: (state,action)=>{
-            
-        // },
+        deleteUser: (state,action)=>{
+            let {id} = action.payload
+            // console.log(id,name,email,phone)
+            console.log(id)
+
+            let userId = state.find((user)=>{
+                return user.id == id
+            })
+            if(userId)
+            {
+               return state.filter(user=>user.id!=id)
+            }
+        },
 
     }
 })
 
-export const {addUser ,editUser } = userSlice.actions
+export const {addUser ,editUser, deleteUser } = userSlice.actions
 export default userSlice.reducer;
