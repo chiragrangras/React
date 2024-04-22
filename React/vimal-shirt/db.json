@@ -1,0 +1,10 @@
+{
+    "users":[
+        {
+            "id": "1",
+            "name": "json-server",
+            "email": "typicode",
+            "password": "1234"
+        }
+    ]
+}
