@@ -31,6 +31,14 @@
   background-color: green;
 }
 
+.box-Ferozi{
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid black;
+  background-color: #57e9f6;
+}
+
 .post_order_info{
   display: flex;
   justify-content: center;
@@ -89,6 +97,13 @@
   color: black;
 }
 
+.signup_box{
+  width: 450px;
+  height: 740px;
+  margin-left: 400px;
+  text-align: center;
+  background-color: white;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
