@@ -8,6 +8,7 @@ import SellOurProduct from "./SellOurProduct";
 import MenProduct from "./MenProduct";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import WomenProduct from "./WomenProuduct";
 // npm i bootstrap
 // npm i react-bootstrap
 // npm i react-router-dom
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
           <Route path="/men-product" element={<MenProduct />}></Route>
+          <Route path="/women-product" element={<WomenProduct/>}></Route>
           <Route path="/track-order" element={<TrackOrder/>}></Route>
           <Route path="/sell-our-product" element={<SellOurProduct/>}></Route>
           <Route path="/sign-up" element={<SignUp />}></Route>

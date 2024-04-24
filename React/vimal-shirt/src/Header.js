@@ -70,11 +70,11 @@ function Header(){
                   </NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Women" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action1">
-                    Women Tank Top
+                <NavDropdown.Item href="women-product">
+                    Women T-shirt
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action2">
-                    Women T-shirt
+                    Women Tank Top
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href="#action3">
@@ -98,16 +98,16 @@ function Header(){
                   <NavDropdown.Item href="#action9">Women Set</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown title="Kids" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action1">
-                    Kids Shorts
+                <NavDropdown.Item href="#action1">
+                    Kids T-shirts
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action2">
+                    Kids Shorts
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action3">
                     Kids Trackpants
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action3">
-                    Kids T-shirts
-                  </NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
                     Kids Sweat suits
                   </NavDropdown.Item>

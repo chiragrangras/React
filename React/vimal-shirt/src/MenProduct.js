@@ -1,8 +1,12 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function MenProduct() {
   return (
+    <>
+    <Header/>
     <div className="d-flex gap-5 p-5">
       <Card style={{ width: "25rem" }}>
         <Card.Img variant="top" />
@@ -63,11 +67,11 @@ function MenProduct() {
       <Card style={{ width: "25rem" }}>
         <Card.Img variant="top" />
         <img
-          src="https://cdn.shopify.com/s/files/1/0619/0235/6702/files/T-FEROZI-01-2_64c08b90-1b0a-489c-b279-b5534067607d_360x493.jpg?v=1711371166"
-          data-sizes="auto"
-          data-aspectratio="0.75"
-          data-parent-fit="contain"
-          alt=""
+        src="https://cdn.shopify.com/s/files/1/0619/0235/6702/files/T-FEROZI-01-1_e375b2fa-30b2-4f7a-8d18-5513d58de5fb_360x493.jpg?v=1711371166" 
+        data-sizes="auto" 
+        data-aspectratio="0.75" 
+        data-parent-fit="contain" 
+        alt=""
         ></img>
         <Card.Body>
           <Card.Title>
@@ -87,6 +91,8 @@ function MenProduct() {
         </Card.Body>
       </Card>
     </div>
+    <Footer/>
+    </>
   );
 }
 
