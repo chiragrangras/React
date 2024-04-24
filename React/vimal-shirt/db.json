@@ -2,8 +2,8 @@
   "users": [
     {
       "id": "1",
-      "name": "json-server",
-      "email": "typicode",
+      "name": "Jon",
+      "email": "jon23@gmail.com",
       "password": "1234"
     }
   ]
