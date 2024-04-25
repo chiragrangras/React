@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function SignUp() {
   let [name, setname] = useState("");
@@ -9,7 +11,7 @@ function SignUp() {
 
   let [nameBlur, setNameBlur] = useState(false);
   let [emailBlur, setEmailBlur] = useState(false);
-  let [passwordBlur,setPasswordBlur] = useState(false);
+  let [passwordBlur, setPasswordBlur] = useState(false);
 
   let navigate = useNavigate();
 
@@ -28,7 +30,7 @@ function SignUp() {
       isValidationError = true;
     }
 
-    if(!inputData.password){
+    if (!inputData.password) {
       setPasswordBlur(true);
       isValidationError = true;
     }
@@ -91,91 +93,97 @@ function SignUp() {
   };
 
   return (
-    <div className="signup_box">
-      <div className="container w-50 text-start">
-        <div className="my-3">
-          <h2>Registration</h2>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <div className="mb-3">
-              <label className="form-label">User Name :&nbsp;</label>
-              <input
-                className="my-3"
-                type="text"
-                value={name}
-                onChange={(e) => {
-                  setname(e.target.value);
-                  if (e.target.value.length === 0) {
-                    setNameBlur(true);
-                  } else {
-                    setNameBlur(false);
-                  }
-                }}
-                placeholder="Enter User Name"
-              />
-              {nameBlur && (
-                <span className="text-danger"> * Enter User Name</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label className="form-label">User Email :&nbsp;</label>
-              <input
-                className="my-3"
-                type="text"
-                value={email}
-                onChange={(e) => {
-                  setemail(e.target.value);
-                  if (e.target.value.length === 0) {
-                    setEmailBlur(true);
-                  } else {
-                    setEmailBlur(false);
-                  }
-                }}
-                placeholder="Enter User Email"
-              />
-              {emailBlur && (
-                <span className="text-danger"> * Enter User Email</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Password :&nbsp;</label>
-              <input
-                className="my-3"
-                type="password"
-                value={password}
-                onChange={(e) => {
-                  setpassword(e.target.value);
-                  if(e.target.value.length === 0){
-                    setPasswordBlur(true);
-                  }else{
-                    setPasswordBlur(false);
-                  }
-                }}
-                placeholder="Enter User Password"
-              />
-              {passwordBlur && (
-                <span className="text-danger"> * Enter User Password</span>
-              )}
-            </div>
-            <button className="btn btn-dark">Register</button>
-            <br />
-            <Link to={"/sign-in"} className="navigate">
-              Login
-            </Link>
-            <p className="signin_">Or, log in with your email</p>
-            <div className="google_signin">
-              <i className="bx bxl-google"></i> Login in With Google
-            </div>
-            <div className="google_signin">
-              <i className="bx bxl-facebook"></i> Login in With Facebook
-            </div>
-            <p className="signin_">Don't have an account yet? Register</p>
-            <p className="signin_">© 2023 Dreams Rent. All Rights Reserved.</p>
+    <>
+      <Header />
+      <div className="signup_box">
+        <div className="container w-50 text-start">
+          <div className="my-3">
+            <h2 className="registration">Registration</h2>
           </div>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <div className="mb-3">
+                <label className="form-label">User Name :&nbsp;</label>
+                <input
+                  className="my-3"
+                  type="text"
+                  value={name}
+                  onChange={(e) => {
+                    setname(e.target.value);
+                    if (e.target.value.length === 0) {
+                      setNameBlur(true);
+                    } else {
+                      setNameBlur(false);
+                    }
+                  }}
+                  placeholder="Enter User Name"
+                />
+                {nameBlur && (
+                  <span className="text-danger"> * Enter User Name</span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label className="form-label">User Email :&nbsp;</label>
+                <input
+                  className="my-3"
+                  type="text"
+                  value={email}
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                    if (e.target.value.length === 0) {
+                      setEmailBlur(true);
+                    } else {
+                      setEmailBlur(false);
+                    }
+                  }}
+                  placeholder="Enter User Email"
+                />
+                {emailBlur && (
+                  <span className="text-danger"> * Enter User Email</span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label className="form-label">Password :&nbsp;</label>
+                <input
+                  className="my-3"
+                  type="password"
+                  value={password}
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                    if (e.target.value.length === 0) {
+                      setPasswordBlur(true);
+                    } else {
+                      setPasswordBlur(false);
+                    }
+                  }}
+                  placeholder="Enter User Password"
+                />
+                {passwordBlur && (
+                  <span className="text-danger"> * Enter User Password</span>
+                )}
+              </div>
+              <button className="btn btn-dark">Register</button>
+              <br />
+              <Link to={"/sign-in"} className="navigate">
+                Login
+              </Link>
+              <p className="signin_">Or, log in with your email</p>
+              <div className="google_signin">
+                <i className="bx bxl-google"></i> Login in With Google
+              </div>
+              <div className="google_signin">
+                <i className="bx bxl-facebook"></i> Login in With Facebook
+              </div>
+              <p className="signin_">Don't have an account yet? Register</p>
+              <p className="signin_">
+                © 2023 Dreams Rent. All Rights Reserved.
+              </p>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

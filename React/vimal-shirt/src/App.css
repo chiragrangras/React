@@ -97,14 +97,6 @@
   color: black;
 }
 
-.signup_box{
-  width: 450px;
-  height: 740px;
-  margin-left: 400px;
-  text-align: center;
-  background-color: white;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
