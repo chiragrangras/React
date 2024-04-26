@@ -17,6 +17,12 @@
       "name": "chirag",
       "email": "chirag@gmail.com",
       "password": "12345"
+    },
+    {
+      "id": "ac63",
+      "name": "deepak",
+      "email": "rajput1298@gmail.com",
+      "password": "hello123"
     }
   ]
 }
