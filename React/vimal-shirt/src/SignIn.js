@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import Header from "./Header";
 import Footer from "./Footer";
 import { UserLogin } from "./App";
-
 
 function SignIn() {
   const { setLoginUser } = useContext(UserLogin);
@@ -35,24 +35,46 @@ function SignIn() {
     }
     if (validateerrors()) {
       console.log("proceed");
-      fetch("http://localhost:4000/users")
-        .then((res) => {
-          return res.json();
-        })
-        .then((userList) => {
+
+      axios
+        .get("http://localhost:4000/users")
+        .then((response) => {
+          const userList = response.data;
           console.log(userList);
           const userFound = userList.find(
             (user) => user.email === inputData.email
           );
           console.log(`User found: ${userFound}`);
           if (userFound?.password === inputData.password) {
-            console.log("Login succesfull");
+            console.log("Login successful");
             setLoginUser(userFound.name);
           } else {
             console.log("Login failed. Invalid credentials");
           }
           navigate("/");
+        })
+        .catch((error) => {
+          console.error("Error fetching users:", error);
         });
+
+      // fetch("http://localhost:4000/users")
+      //   .then((res) => {
+      //     return res.json();
+      //   })
+      //   .then((userList) => {
+      //     console.log(userList);
+      //     const userFound = userList.find(
+      //       (user) => user.email === inputData.email
+      //     );
+      //     console.log(`User found: ${userFound}`);
+      //     if (userFound?.password === inputData.password) {
+      //       console.log("Login succesfull");
+      //       setLoginUser(userFound.name);
+      //     } else {
+      //       console.log("Login failed. Invalid credentials");
+      //     }
+      //     navigate("/");
+      //   });
     }
   };
 
