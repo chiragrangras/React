@@ -1,7 +1,7 @@
 .signIn_box{
-    width: 630px;
-    height: 300px;
-    margin:40px 0px 0px 300px;
+    width: 450px;
+    height: 350px;
+    /* margin:40px 0px 0px 300px; */
     text-align: center;
     background-color: white;
 }

@@ -71,7 +71,7 @@ function Footer() {
           <Col>
             <Nav className="flex-column pt-5">
               <h1>Info</h1>
-              <NavLink href="#" className="text-white">
+              <NavLink href="/track-order" className="text-white">
                 Track Your Order
               </NavLink>
               <NavLink href="#" className="text-white">

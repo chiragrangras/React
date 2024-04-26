@@ -1,8 +1,11 @@
 import Button from "react-bootstrap/Button";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function TrackOrder() {
   return (
     <>
+    <Header/>
       <div className="bg-light pt-1">
         <img src="//vimalclothing.com/cdn/shop/files/vimal_clothing_c0eafb7c-4d96-4c7d-9f4d-fe5cbc38cc92.png?v=1706553278&amp;width=100" alt="" />
       </div>
@@ -48,6 +51,7 @@ function TrackOrder() {
           </Button>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
