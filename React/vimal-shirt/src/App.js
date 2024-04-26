@@ -1,5 +1,6 @@
 import "./App.css";
 import "./SignIn.css";
+import './Signup.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createContext, useState } from "react";
@@ -11,11 +12,11 @@ import MenProduct from "./MenProduct";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 import WomenProduct from "./WomenProuduct";
+export const UserLogin = createContext();
 // npm i bootstrap
 // npm i react-bootstrap
 // npm i react-router-dom
 // npm install --save react-toastify
-export const UserLogin = createContext();
 
 function App() {
   const [loginUser, setLoginUser] = useState("");
