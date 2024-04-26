@@ -94,7 +94,7 @@ function SignUp() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="signup_box">
         <div className="container w-50 text-start">
           <div className="my-3">

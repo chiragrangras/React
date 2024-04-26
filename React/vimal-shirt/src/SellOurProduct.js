@@ -21,7 +21,7 @@ function SellOurProduct() {
   };
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <h1 className="Sell_title">Sell Our Product</h1>
       <div className="Mob">
         <span>

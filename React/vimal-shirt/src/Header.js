@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { UserLogin } from "./App";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { loginUser, setLoginUser } = useContext(UserLogin);
@@ -117,8 +118,8 @@ function Header() {
                 </NavDropdown.Item>
               </NavDropdown>
               <div className="link d-flex gap-4">
-                <Nav.Link href="/track-order">Track Your Order</Nav.Link>
-                <Nav.Link href="/sell-our-product">Sell Our Product</Nav.Link>
+                <Nav.Link as={Link} to="/track-order">Track Your Order</Nav.Link>
+                <Nav.Link as={Link} to="/sell-our-product">Sell Our Product</Nav.Link>
               </div>
             </div>
             <div className="d-flex gap-2">
@@ -136,10 +137,10 @@ function Header() {
                 </>
               ) : (
                 <>
-                  <Nav.Link variant="outline-primary" href="/sign-in">
+                  <Nav.Link as={Link} to="/sign-in" variant="outline-primary">
                     Sign-In
                   </Nav.Link>
-                  <Nav.Link variant="outline-primary" href="/sign-up">
+                  <Nav.Link variant="outline-primary" as={Link} to="/sign-up">
                     Sign-Up
                   </Nav.Link>
                 </>

@@ -2,7 +2,7 @@ import "./App.css";
 import "./SignIn.css";
 import './Signup.css';
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { createContext, useState } from "react";
 import Cart from "./Cart";
 import Home from "./Home";
@@ -12,7 +12,10 @@ import MenProduct from "./MenProduct";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 import WomenProduct from "./WomenProuduct";
+import Header from "./Header";
+
 export const UserLogin = createContext();
+
 // npm i bootstrap
 // npm i react-bootstrap
 // npm i react-router-dom
@@ -20,6 +23,8 @@ export const UserLogin = createContext();
 
 function App() {
   const [loginUser, setLoginUser] = useState("");
+  // const location = useLocation();
+  // const showHeader = location.pathname !== "/sign-in" && location.pathname !== "/sign-up";
 
   return (
     <div className="App">
@@ -27,6 +32,7 @@ function App() {
         <UserLogin.Provider
           value={{ loginUser, setLoginUser }}
         >
+          {/* <Header/> */}
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
