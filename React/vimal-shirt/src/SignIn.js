@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "./Header";
 import Footer from "./Footer";
 import { UserLogin } from "./App";
+import { toast } from 'react-toastify';
 
 function SignIn() {
   const { setLoginUser } = useContext(UserLogin);
@@ -14,6 +15,16 @@ function SignIn() {
   const [passwordBlur, setPasswordBlur] = useState(false);
 
   const navigate = useNavigate();
+
+  const notifyLoginSuccess = (username) => {
+    toast.success(`Login successful. Welcome ${username}!`, {position: "top-center"});
+  }
+
+  const notifyLoginFailure = () => {
+    const content = 'Login failed. Invalid credentials, please try again.';
+    const options = {position: "top-center", hideProgressBar: false};
+    toast.error(content, options);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,8 +58,10 @@ function SignIn() {
           console.log(`User found: ${userFound}`);
           if (userFound?.password === inputData.password) {
             console.log("Login successful");
+            notifyLoginSuccess(userFound.name);
             setLoginUser(userFound.name);
           } else {
+            notifyLoginFailure();
             console.log("Login failed. Invalid credentials");
           }
           navigate("/");
@@ -82,11 +95,11 @@ function SignIn() {
     let result = true;
     if (email === "" || email === null) {
       result = false;
-      alert("Please Enter Email");
+      
     }
     if (password === "" || password === null) {
       result = false;
-      alert("Please Enter Password");
+      
     }
     return result;
   };
