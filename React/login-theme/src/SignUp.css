@@ -1,0 +1,9 @@
+.signup_box{
+    border: 1px solid black;
+    width:30%;
+    min-height: 300px;
+}
+
+.container{
+    text-align: center;
+}

@@ -1,0 +1,28 @@
+.signIn_box{
+    border: 1px solid black;
+    width:30%;
+    min-height: 300px;
+}
+  
+.container{
+    text-align: center;
+}
+  
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.img{
+    width: 30px;
+    height: 30px;
+}
+  
+.cursorPointer{
+    cursor: pointer;
+}
+
+.log_btn{
+    gap: 10px;  
+}
