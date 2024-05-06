@@ -16,7 +16,7 @@ function Login() {
           <h2 className="login">Login</h2>
           <div className="logo">
             <img className="img" alt="" src="./Img/Logo.jpg" />
-            <h6>Amazing serivce</h6>
+            <h6 className="subtitle">Amazing service</h6>
             <Link onClick={()=>{theme === "light-theme"?setTheme("dark-theme"):setTheme("light-theme")}}>
                 <FontAwesomeIcon
                 icon={theme === "light-theme"? faMoon : faSun}
