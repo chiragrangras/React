@@ -18,7 +18,10 @@
     width: 30px;
     height: 30px;
 }
-  
+
+.subtitle{
+    text-transform: uppercase;
+}
 .cursorPointer{
     cursor: pointer;
 }
