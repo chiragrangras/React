@@ -1,0 +1,261 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.language img{
+  width: 30px;
+  border-radius: 50px;
+}
+
+.service{
+  width: 40px;
+  fill: white;
+}
+
+.nav-bar{
+  background-color: rgba(19, 111, 254, 1);
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.stay svg{
+  width: 20px;
+  fill: white;
+}
+
+.stay{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.flights svg{
+  width: 20px;
+  fill: white;
+}
+
+.flights{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.flight_hotel svg{
+  width: 20px;
+  fill: white;
+}
+
+.flight_hotel{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.car_rentals svg{
+  width: 20px;
+  fill: white;
+}
+
+.car_rentals{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.attractions svg{
+  width: 20px;
+  fill: white;
+}
+
+.attractions{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.airport_taxis svg{
+  width: 20px;
+  fill: white;
+}
+
+.airport_taxis{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgba(19, 111, 254, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.destination{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 30px;
+  padding-right: 10px;
+}
+
+.destination svg{
+  width: 20px;
+  background-color: white;
+  margin: 0px 10px;
+}
+
+.travel-date{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 30px;
+  cursor: pointer;
+}
+
+.travel-date svg{
+  width: 20px;
+  background-color: white;
+  margin: 0px 10px;
+}
+
+.person-count {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border:5px solid orange;
+  margin: 10px 0px 0px 10px;
+  cursor: pointer;
+}
+
+.person-count svg{
+  width: 20px;
+  background-color: white;
+  margin: 0px 10px;
+}
+
+.person-count-popup{
+  width: 285px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #ddc99f;
+  border-radius: 10px;
+  position: absolute;
+  top: 110%;
+  right:25%;
+}
+
+.search-btn{
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border:5px solid orange;
+  margin: 10px 30px 0px 30px;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+
+.banner-img {
+  background-image: url(./banner-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 370px;
+}
+
+.ml-5{
+  margin-left: 5%;
+}
+
+.banner-h-font{
+  color: #fff;
+  font-family: sans-serif;
+  text-align: left;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+p{
+  color: #fff;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.discover-btn{
+  background-color: blue;
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: sans-serif;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.text-align-left{
+  text-align: left;
+}
+
+.person-count-popup-btn{
+  border: 1px solid blue;
+  background-color: #fff;
+  color: blue;
+  padding: 5px 100px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
