@@ -7,7 +7,6 @@ function TaskList({ confusion, onchangeTodo, ondeleteTodo }) {
             <div key={v.id}>
                 <li>
                     <Task
-
                     todo={v}
                     onchange={onchangeTodo}
                     ondelete={ondeleteTodo}
