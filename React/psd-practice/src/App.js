@@ -13,6 +13,12 @@ function App() {
           <a href="#">Blog</a>
           <button className="btn">Sign In</button>
         </div>
+        <div className="section-1">
+          <span>
+            <big>Ui</big>
+          </span>
+          <h6 className="text">BEGINNER′s</h6>
+        </div>
       </div>
     </div>
   );
